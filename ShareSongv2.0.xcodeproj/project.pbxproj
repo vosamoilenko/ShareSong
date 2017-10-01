@@ -18,8 +18,6 @@
 		E73E75E91F65F69C0068896D /* SMKTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E75E81F65F69C0068896D /* SMKTransitionViewController.swift */; };
 		E73E75ED1F65F8BB0068896D /* SMKSongStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E75EC1F65F8BB0068896D /* SMKSongStore.swift */; };
 		E74C25431F44801C00BD86C7 /* StorefrontCountries.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */; };
-		E7A201801F3E01E000C95FC9 /* spotifyButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A2017E1F3E01E000C95FC9 /* spotifyButton.png */; };
-		E7A201811F3E01E000C95FC9 /* appleButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E7A2017F1F3E01E000C95FC9 /* appleButton.png */; };
 		E7A201851F3F1DEF00C95FC9 /* SMKSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A201841F3F1DEF00C95FC9 /* SMKSong.swift */; };
 		E7A2018E1F3F709500C95FC9 /* SMKLoadAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A2018D1F3F709500C95FC9 /* SMKLoadAnimator.swift */; };
 		E7D059BE1F3B44DE00BE0D19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D059BD1F3B44DE00BE0D19 /* AppDelegate.swift */; };
@@ -38,16 +36,14 @@
 		E70865881F3CE81B0014FB95 /* set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = set.png; sourceTree = "<group>"; };
 		E708658A1F3CEECC0014FB95 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		E708658E1F3CF3B50014FB95 /* HistoryViewCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewCollectionCell.swift; sourceTree = "<group>"; };
-		E70E7FBF1F40C0FF0056C3D2 /* SpotifySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SpotifySearch.swift; path = ShareSongv2.0/SpotifySearch.swift; sourceTree = "<group>"; };
+		E70E7FBF1F40C0FF0056C3D2 /* SpotifySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifySearch.swift; sourceTree = "<group>"; };
 		E71328941F66F22B0032D020 /* tets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tets.swift; path = ShareSongv2.0/tets.swift; sourceTree = "<group>"; };
-		E71A5DB71F4384B00049E299 /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyUtils.swift; path = ShareSongv2.0/MyUtils.swift; sourceTree = "<group>"; };
+		E71A5DB71F4384B00049E299 /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 		E72A8BC71F5AB84C005C2939 /* autoS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = autoS.png; sourceTree = "<group>"; };
-		E73E75E41F65F67B0068896D /* AppleMusicSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppleMusicSearch.swift; path = ShareSongv2.0/AppleMusicSearch.swift; sourceTree = "<group>"; };
+		E73E75E41F65F67B0068896D /* AppleMusicSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleMusicSearch.swift; sourceTree = "<group>"; };
 		E73E75E81F65F69C0068896D /* SMKTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKTransitionViewController.swift; sourceTree = "<group>"; };
 		E73E75EC1F65F8BB0068896D /* SMKSongStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSongStore.swift; sourceTree = "<group>"; };
 		E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StorefrontCountries.plist; sourceTree = "<group>"; };
-		E7A2017E1F3E01E000C95FC9 /* spotifyButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spotifyButton.png; path = "../../Objective-C/ShareSong/ShareSong/spotifyButton.png"; sourceTree = "<group>"; };
-		E7A2017F1F3E01E000C95FC9 /* appleButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = appleButton.png; path = "../../Objective-C/ShareSong/ShareSong/appleButton.png"; sourceTree = "<group>"; };
 		E7A201841F3F1DEF00C95FC9 /* SMKSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSong.swift; sourceTree = "<group>"; };
 		E7A2018D1F3F709500C95FC9 /* SMKLoadAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKLoadAnimator.swift; sourceTree = "<group>"; };
 		E7D059BA1F3B44DE00BE0D19 /* ShareSongv2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareSongv2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,8 +56,10 @@
 		E7D059CF1F3B475800BE0D19 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = down.png; path = ShareSongv2.0/down.png; sourceTree = "<group>"; };
 		E7D059D01F3B475800BE0D19 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ShareSongv2.0/logo.png; sourceTree = "<group>"; };
 		E7D059D11F3B475800BE0D19 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = up.png; path = ShareSongv2.0/up.png; sourceTree = "<group>"; };
-		E7ED2C1C1F43203C004B93E5 /* SMKSongTransfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMKSongTransfer.swift; path = ShareSongv2.0/SMKSongTransfer.swift; sourceTree = "<group>"; };
-		E7ED2C1E1F43275B004B93E5 /* SMKFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SMKFilter.swift; path = ShareSongv2.0/SMKFilter.swift; sourceTree = "<group>"; };
+		E7ED2C1C1F43203C004B93E5 /* SMKSongTransfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSongTransfer.swift; sourceTree = "<group>"; };
+		E7ED2C1E1F43275B004B93E5 /* SMKFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKFilter.swift; sourceTree = "<group>"; };
+		E7F5CAEE1F813B0900C802CA /* spotifyButtonImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotifyButtonImage.png; sourceTree = "<group>"; };
+		E7F5CAEF1F813B0900C802CA /* appleButtonImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appleButtonImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +95,8 @@
 		E7A2018C1F3F6EA900C95FC9 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
+				E7ED2C1C1F43203C004B93E5 /* SMKSongTransfer.swift */,
+				E7ED2C1E1F43275B004B93E5 /* SMKFilter.swift */,
 				E7A201841F3F1DEF00C95FC9 /* SMKSong.swift */,
 				E73E75EC1F65F8BB0068896D /* SMKSongStore.swift */,
 			);
@@ -107,16 +107,11 @@
 			isa = PBXGroup;
 			children = (
 				E71328941F66F22B0032D020 /* tets.swift */,
-				E70E7FBF1F40C0FF0056C3D2 /* SpotifySearch.swift */,
-				E7ED2C1C1F43203C004B93E5 /* SMKSongTransfer.swift */,
-				E71A5DB71F4384B00049E299 /* MyUtils.swift */,
-				E7ED2C1E1F43275B004B93E5 /* SMKFilter.swift */,
-				E73E75E41F65F67B0068896D /* AppleMusicSearch.swift */,
 				E7D059BC1F3B44DE00BE0D19 /* ShareSongv2.0 */,
 				E7D059BB1F3B44DE00BE0D19 /* Products */,
 				E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */,
-				E7A2017E1F3E01E000C95FC9 /* spotifyButton.png */,
-				E7A2017F1F3E01E000C95FC9 /* appleButton.png */,
+				E7F5CAEF1F813B0900C802CA /* appleButtonImage.png */,
+				E7F5CAEE1F813B0900C802CA /* spotifyButtonImage.png */,
 				E7D059CF1F3B475800BE0D19 /* down.png */,
 				E7D059D01F3B475800BE0D19 /* logo.png */,
 				E7D059D11F3B475800BE0D19 /* up.png */,
@@ -136,6 +131,8 @@
 		E7D059BC1F3B44DE00BE0D19 /* ShareSongv2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				E71A5DB71F4384B00049E299 /* MyUtils.swift */,
+				E7F5CAE91F81391500C802CA /* Services */,
 				E7A2018C1F3F6EA900C95FC9 /* Modal */,
 				E7A2018B1F3F6E9100C95FC9 /* View */,
 				E7A2018A1F3F6DB500C95FC9 /* ViewController */,
@@ -146,6 +143,15 @@
 				E7D059C91F3B44DE00BE0D19 /* Info.plist */,
 			);
 			path = ShareSongv2.0;
+			sourceTree = "<group>";
+		};
+		E7F5CAE91F81391500C802CA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E73E75E41F65F67B0068896D /* AppleMusicSearch.swift */,
+				E70E7FBF1F40C0FF0056C3D2 /* SpotifySearch.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,13 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D059D41F3B475800BE0D19 /* up.png in Resources */,
-				E7A201811F3E01E000C95FC9 /* appleButton.png in Resources */,
 				E7D059C81F3B44DE00BE0D19 /* LaunchScreen.storyboard in Resources */,
 				E74C25431F44801C00BD86C7 /* StorefrontCountries.plist in Resources */,
 				E7D059D31F3B475800BE0D19 /* logo.png in Resources */,
 				E7D059C51F3B44DE00BE0D19 /* Assets.xcassets in Resources */,
 				E7D059C31F3B44DE00BE0D19 /* Main.storyboard in Resources */,
-				E7A201801F3E01E000C95FC9 /* spotifyButton.png in Resources */,
 				E70865891F3CE81B0014FB95 /* set.png in Resources */,
 				E7D059D21F3B475800BE0D19 /* down.png in Resources */,
 				E72A8BC81F5AB84C005C2939 /* autoS.png in Resources */,
