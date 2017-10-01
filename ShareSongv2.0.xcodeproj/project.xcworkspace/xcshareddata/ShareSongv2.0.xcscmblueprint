@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "12E9AECB6EA315950E5F6F1219C2E3DF432B4FB2",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "12E9AECB6EA315950E5F6F1219C2E3DF432B4FB2" : 9223372036854775807,
+    "DEB2C8DE5A77A5973B7D700CC992E2EBFA386340" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "0373F222-74E2-4948-A493-44CF4480F5F3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "12E9AECB6EA315950E5F6F1219C2E3DF432B4FB2" : "ShareSongv2.0\/",
+    "DEB2C8DE5A77A5973B7D700CC992E2EBFA386340" : "..\/Objective-C\/ShareSong"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ShareSongv2.0",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ShareSongv2.0.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vosamoilenko\/ShareSong-app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "12E9AECB6EA315950E5F6F1219C2E3DF432B4FB2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vosamoilenko\/ShareSong.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DEB2C8DE5A77A5973B7D700CC992E2EBFA386340"
+    }
+  ]
+}
