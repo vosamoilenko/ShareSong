@@ -24,6 +24,7 @@
 @implementation SMKTransferingSong
 
 #pragma mark - Initializer
+// DONE almost
 + (instancetype)sharedTransfer {
     static SMKTransferingSong *sharedTransfer = nil;
     if (!sharedTransfer) {
@@ -31,12 +32,14 @@
     }
     return sharedTransfer;
 }
+//DONE
 - (instancetype)init {
     @throw [NSException exceptionWithName:@"Singleton"
                                    reason:@"Use +[SMKTransferingSong sharedTransfer]"
                                  userInfo:nil];
     return nil;
 }
+// DONE
 - (instancetype)initPrivate {
     if (self = [super init]) {
         self.appleMusicFrontStoreId = [[NSString alloc] init];

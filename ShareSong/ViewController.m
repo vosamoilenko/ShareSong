@@ -38,7 +38,6 @@
 
 @implementation ViewController
 
-
 #pragma mark - LifeCycle
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -110,8 +109,8 @@
 }
 
 #pragma mark - Touches
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.resultTextField resignFirstResponder];
 }
 
@@ -119,7 +118,7 @@
 - (IBAction)presentHistoryVC:(id)sender {
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
     SMKHistoryCollectionViewController *vc = [[SMKHistoryCollectionViewController alloc]
-                                              initWithCollectionViewLayout:flowLayout];
+                                            initWithCollectionViewLayout:flowLayout];
     
     [self presentViewController:vc animated:YES completion:nil];
     

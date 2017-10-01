@@ -6,7 +6,6 @@
 @interface AppDelegate ()
 @end
 
-
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
@@ -21,7 +20,5 @@
         @throw [NSException exceptionWithName:@"Error while saving" reason:@"appDelegate" userInfo:nil];
     }
 }
-
-
 
 @end

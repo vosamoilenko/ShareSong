@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lpT-73-7gU">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -19,28 +19,28 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LT6-q3-WyK">
-                                <rect key="frame" x="30" y="35" width="354" height="568"/>
+                                <rect key="frame" x="26" y="35" width="268" height="400"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5Y-GP-Glv">
-                                        <rect key="frame" x="140" y="118" width="74" height="74"/>
+                                        <rect key="frame" x="97" y="118" width="74" height="74"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="wdk-bv-TcI">
-                                                <rect key="frame" x="17" y="19" width="36" height="36"/>
+                                                <rect key="frame" x="14" y="14" width="47" height="47"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="36" id="dBl-GR-aCs"/>
+                                                    <constraint firstAttribute="width" constant="47" id="dBl-GR-aCs"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.9720723032951355" green="0.58997255563735962" blue="0.58989256620407104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="wdk-bv-TcI" firstAttribute="top" secondItem="h5Y-GP-Glv" secondAttribute="top" constant="19" id="HQ2-jx-bki"/>
+                                            <constraint firstItem="wdk-bv-TcI" firstAttribute="top" secondItem="h5Y-GP-Glv" secondAttribute="top" constant="14" id="HQ2-jx-bki"/>
                                             <constraint firstAttribute="height" constant="74" id="dmc-Ze-HK0"/>
                                             <constraint firstAttribute="width" constant="74" id="hf9-6m-k0Y"/>
-                                            <constraint firstItem="wdk-bv-TcI" firstAttribute="centerX" secondItem="h5Y-GP-Glv" secondAttribute="centerX" constant="-2" id="qLh-sf-QHi"/>
+                                            <constraint firstItem="wdk-bv-TcI" firstAttribute="centerX" secondItem="h5Y-GP-Glv" secondAttribute="centerX" constant="0.5" id="qLh-sf-QHi"/>
                                             <constraint firstItem="wdk-bv-TcI" firstAttribute="centerY" secondItem="h5Y-GP-Glv" secondAttribute="centerY" id="zVo-SY-ID8"/>
                                         </constraints>
                                     </view>
@@ -52,7 +52,7 @@
                                 </constraints>
                             </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LEQ-oB-ji6">
-                                <rect key="frame" x="51" y="562" width="312" height="51"/>
+                                <rect key="frame" x="47" y="394" width="226" height="51"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="HTL-GU-21o"/>
@@ -62,7 +62,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4U-lx-310">
-                                <rect key="frame" x="185" y="684" width="44" height="44"/>
+                                <rect key="frame" x="138" y="516" width="44" height="44"/>
                                 <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Tqz-oG-r8b"/>
@@ -73,14 +73,14 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nh6-wP-CHX">
-                                <rect key="frame" x="123" y="644" width="169" height="4"/>
+                                <rect key="frame" x="119" y="476" width="83" height="4"/>
                                 <color key="backgroundColor" red="0.9720723032951355" green="0.58997255563735962" blue="0.58989256620407104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="zDT-Bf-f6I"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t0i-3r-VuZ">
-                                <rect key="frame" x="51" y="627" width="312" height="4"/>
+                                <rect key="frame" x="47" y="459" width="226" height="4"/>
                                 <color key="backgroundColor" red="0.77577304840087891" green="0.92067700624465942" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="bLS-Qn-VNq"/>
@@ -128,7 +128,7 @@
                         <viewControllerLayoutGuide type="bottom" id="bMg-f7-lLa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="eBZ-05-eJN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.9720723032951355" green="0.58997255563735962" blue="0.58989256620407104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -139,6 +139,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo.png" width="435" height="477"/>
+        <image name="logo.png" width="450" height="501"/>
     </resources>
 </document>

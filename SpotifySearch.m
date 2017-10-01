@@ -17,6 +17,7 @@ NSString *clientId = @"785d0dd3031a4594895b8e72ba83548a";
 NSString *clientSecret = @"23ed8ea00a54403baabed39b408fcce8";
 
 #pragma mark - download Data
+//DONE
 + (void)makeDataTaskWithTemp:(NSDictionary *)dict
                    withToken:(NSDictionary *)tokenData
                    withBlock:(void(^)(NSDictionary *dict, BOOL success, NSError *error))block {
@@ -143,6 +144,7 @@ NSString *clientSecret = @"23ed8ea00a54403baabed39b408fcce8";
 }
 
 #pragma mark - Get song's info from track ID
+//TODO
 + (void)makeDataTaskWithTrackId:(NSString *)trackId withToken:(NSDictionary *)tokenData
                       withBlock:(void(^)(NSDictionary *terms, BOOL success, NSError *error))block {
     
@@ -176,7 +178,7 @@ NSString *clientSecret = @"23ed8ea00a54403baabed39b408fcce8";
                 }];
                 return;
             }
-            
+            // what
             NSDictionary *terms = [SpotifySearch getInfoFromSong:json];
             block(terms,YES,error);
         } else {
@@ -188,6 +190,7 @@ NSString *clientSecret = @"23ed8ea00a54403baabed39b408fcce8";
 }
 
 #pragma mark - Configure request
+//DONE
 + (NSMutableURLRequest *)configureRequestForDataTaskWith:(NSURL *)url withToken:(NSDictionary *)tokenData {
     
     NSString *token = [tokenData objectForKey:@"access_token"];
@@ -203,6 +206,7 @@ NSString *clientSecret = @"23ed8ea00a54403baabed39b408fcce8";
 }
 
 #pragma mark - Token
+//DONE
 + (void)spotifyToken:(void(^)(NSDictionary *token))block {
     NSString *body = @"grant_type=client_credentials";
     NSData *postData = [body dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
@@ -225,6 +229,7 @@ NSString *clientSecret = @"23ed8ea00a54403baabed39b408fcce8";
                                                                 NSError * _Nullable error) {
         if (!error) {
             dispatch_async(dispatch_get_main_queue(), ^{
+                NSLog(@"%@", [NSJSONSerialization JSONObjectWithData:data options:0 error:nil]);
                 block([NSJSONSerialization JSONObjectWithData:data options:0 error:nil]);
             });
             
@@ -236,6 +241,7 @@ NSString *clientSecret = @"23ed8ea00a54403baabed39b408fcce8";
 }
 
 #pragma  mark - Parce methods
+//DONE
 + (NSDictionary *)parseJSON:(NSDictionary *)json {
     
     NSString *url = [[[[[json objectForKey:@"tracks"] objectForKey:@"items"] objectAtIndex:0]
@@ -307,6 +313,7 @@ NSString *clientSecret = @"23ed8ea00a54403baabed39b408fcce8";
 }
 
 #pragma  mark - Check JSON/Link methods
+//DONE
 + (BOOL)checkIfValidJSON:(NSDictionary *)dict {
     NSNumber *counterOfTracks = [[dict objectForKey:@"tracks"] objectForKey:@"total"];
     if ([counterOfTracks integerValue] > 0) {

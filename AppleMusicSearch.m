@@ -227,6 +227,7 @@ NSString *appleMusicURLWithTermFrontStoreID = @"https://itunes.apple.com/search?
 
     NSURL *url = [AppleMusicSearch configureLookupURLWithTrackID:[AppleMusicSearch trackIDWithURL:link]
                                             storefrontIdentifier:[self storefrontCountryWithURL:link]];
+    
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration
                                                                     defaultSessionConfiguration]];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];

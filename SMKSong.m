@@ -43,7 +43,6 @@
         self.artist = [aDecoder decodeObjectForKey:@"artist"];
         self.spotifyLink = [aDecoder decodeObjectForKey:@"spotifyLink"];
         self.appleMusicLink = [aDecoder decodeObjectForKey:@"appleMusicLink"];
-        
     }
     return self;
 }
@@ -70,12 +69,11 @@
     return [NSString stringWithFormat:@"Title: %@\nArtist: %@\nSpotLink: %@\nAppMLink: %@\nImg: %@", self.title, self.artist, self.spotifyLink, self.appleMusicLink, self.img];
 }
 
-
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:self.img forKey:@"img"];
     [aCoder encodeObject:self.title forKey:@"title"];
     [aCoder encodeObject:self.artist forKey:@"artist"];
-    [aCoder encodeObject:self.artist forKey:@"albumName"];
+    
     [aCoder encodeObject:self.spotifyLink forKey:@"spotifyLink"];
     [aCoder encodeObject:self.appleMusicLink forKey:@"appleMusicLink"];
 }
