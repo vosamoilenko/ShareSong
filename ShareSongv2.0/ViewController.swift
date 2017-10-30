@@ -10,9 +10,7 @@ import UIKit
 import os.log
 
 class ViewController: UIViewController, UITextFieldDelegate {
-    
 
-    
     @IBOutlet weak var decoratorLine: UIImageView!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
@@ -29,8 +27,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         SMKSongTransfer.sharedTransfer.fetchStorefront()
         SMKSongStore.sharedStore.loadSongs()
         self.constrainValue = self.bottomConstraint.constant
+        
+        let swipeRecognizer = UISwipeGestureRecognizer.init()
+        swipeRecognizer.direction = .up
+        swipeRecognizer.addTarget(self, action: #selector(ViewController.goToHistoryViewController))
+        
+        self.view.addGestureRecognizer(swipeRecognizer)
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         if let autoSearchStatus = UserDefaults.standard.object(forKey: "autoSearch") as? Bool,
             autoSearchStatus,
@@ -43,13 +46,49 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.textField.resignFirstResponder()
     }
-    
-    func t() {
-       myTest { (result) in
-        startTest(counter: 120,source: result)
-        }
+//    func configureSettingsButton() {
+//        self.settingButton.addTarget(self, action: #selector(presentAutoSearchSettingAlertController), for: .touchUpInside)
+//        self.settingButton.addTarget(self, action: #selector(t), for: .touchUpInside)
+//    }
+}
+extension ViewController {
+    @objc func goToHistoryViewController() {
+        let vc = HistoryCollectionViewController()
+        self.present(vc, animated: true, completion: nil)
     }
-    
+    func configureObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(startTrackingSongFromNotification(notification:)), name: NSNotification.Name(rawValue: "autoSearch"), object: nil)
+    }
+    func completionWhenSongIsAlreadyInStore(song: SMKSong) {
+        
+        guard let title = song.title,
+            let artist = song.artist,
+            let appleLink = song.appleLink,
+            let spotifyLink = song.spotifyLink,
+            let pasteboardLink = UIPasteboard.general.string else { return }
+        
+        
+        DispatchQueue.global().async {
+            DispatchQueue.main.async {
+                self.presentSuccessAlertController(message: "\"\(title)\" by \(artist) was found! Link already in your copyboard!")
+                self.activityIndicatorView.stopAnimating()
+            }
+        }
+        
+        if SpotifySearch.isSpotify(link: pasteboardLink) {
+            UIPasteboard.general.string = appleLink
+        } else {
+            UIPasteboard.general.string = spotifyLink
+        }
+        self.isUserInteractionEnabled(flag: true)
+    }
+    func isUserInteractionEnabled(flag: Bool) {
+        self.textField.isUserInteractionEnabled = flag;
+    }
+}
+extension ViewController {
     func prepareUI() {
         configureTextField()
         configureActivityIndicatorView()
@@ -68,15 +107,43 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.activityIndicatorView.center = self.view.center
         self.view.addSubview(self.activityIndicatorView)
     }
-    
-    
-
-
-//    func configureSettingsButton() {
-//        self.settingButton.addTarget(self, action: #selector(presentAutoSearchSettingAlertController), for: .touchUpInside)
-//        self.settingButton.addTarget(self, action: #selector(t), for: .touchUpInside)
-//    }
-    // alertControllers
+    func changeYOfTextField(up: Bool, keyboardRectangle: CGRect) {
+        let distanceForAnimtion = keyboardRectangle.height * 0.6
+        if up {
+            self.bottomConstraint.constant = self.constrainValue - distanceForAnimtion
+            self.decoratorLine.layer.opacity = 1.0
+            self.searchButton.layer.opacity = 1.0
+        } else {
+            self.bottomConstraint.constant = self.constrainValue
+            self.decoratorLine.layer.opacity = 0.6
+            self.searchButton.layer.opacity = 0.6
+        }
+        
+        UIView.animate(withDuration: 0.08, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+}
+extension ViewController {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.textField.resignFirstResponder()
+        if self.textField.text != "" {
+            self.startTrackingSong(link: self.textField.text!)
+        }
+        return true;
+    }
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            changeYOfTextField(up: true, keyboardRectangle: keyboardFrame.cgRectValue)
+        }
+    }
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            changeYOfTextField(up: false, keyboardRectangle: keyboardFrame.cgRectValue)
+        }
+    }
+}
+extension ViewController {
     func presentSuccessAlertController(message: String) {
         let alertController = UIAlertController.init(title: "Successs", message: message, preferredStyle: UIAlertControllerStyle.alert)
         alertController.addAction(UIAlertAction.init(title: "Okay", style: UIAlertActionStyle.cancel, handler: nil))
@@ -86,14 +153,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let alertController = UIAlertController.init(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.alert)
         alertController.title = "Error"
         alertController.addAction(UIAlertAction.init(title: "Noooo", style: UIAlertActionStyle.cancel, handler: nil))
-            self.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
     func presentWrongLinkAlertController() {
         let alertController = UIAlertController.init(title: nil, message: nil, preferredStyle: UIAlertControllerStyle.alert)
         alertController.title = "Oooops"
         alertController.message = " Your link is wrong"
         alertController.addAction(UIAlertAction.init(title: "Okay", style: UIAlertActionStyle.cancel, handler: nil))
-            self.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
     }
     @objc func presentAutoSearchSettingAlertController() {
         var autoSearchStatus: Bool?
@@ -127,80 +194,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return "Disable"
         }
     }
-    
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.textField.resignFirstResponder()
-        if self.textField.text != "" {
-            self.startTrackingSong(link: self.textField.text!)
-        }
-        return true;
-    }
-    @objc func keyboardWillShow(notification: NSNotification) {
-        if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
-            changeYOfTextField(up: true, keyboardRectangle: keyboardFrame.cgRectValue)
-        }
-    }
-    @objc func keyboardWillHide(notification: NSNotification) {
-        if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue {
-            changeYOfTextField(up: false, keyboardRectangle: keyboardFrame.cgRectValue)
-        }
-    }
-    func changeYOfTextField(up: Bool, keyboardRectangle: CGRect) {
-        let distanceForAnimtion = keyboardRectangle.height * 0.6
-        if up {
-            self.bottomConstraint.constant = self.constrainValue - distanceForAnimtion
-            self.decoratorLine.layer.opacity = 1.0
-            self.searchButton.layer.opacity = 1.0
-        } else {
-        self.bottomConstraint.constant = self.constrainValue
-            self.decoratorLine.layer.opacity = 0.6
-            self.searchButton.layer.opacity = 0.6
-        }
-
-        UIView.animate(withDuration: 0.08, animations: {
-            self.view.layoutIfNeeded()
-        })
-    }
-    
-    func configureObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(startTrackingSongFromNotification(notification:)), name: NSNotification.Name(rawValue: "autoSearch"), object: nil)
-    }
-    func completionWhenSongIsAlreadyInStore(song: SMKSong) {
-        
-        guard let title = song.title,
-            let artist = song.artist,
-            let appleLink = song.appleLink,
-            let spotifyLink = song.spotifyLink,
-            let pasteboardLink = UIPasteboard.general.string else { return }
-        
-        
-        DispatchQueue.global().async {
-            DispatchQueue.main.async {
-        self.presentSuccessAlertController(message: "\"\(title)\" by \(artist) was found! Link already in your copyboard!")
-                self.activityIndicatorView.stopAnimating()
-            }
-        }
-        
-        if SpotifySearch.isSpotify(link: pasteboardLink) {
-            UIPasteboard.general.string = appleLink
-        } else {
-            UIPasteboard.general.string = spotifyLink
-        }
-        self.isUserInteractionEnabled(flag: true)
-    }
-
-    func isUserInteractionEnabled(flag: Bool) {
-        self.textField.isUserInteractionEnabled = flag;
-    }
-    
+}
+extension ViewController {
     func startTrackingSong(link: String) {
         
         self.isUserInteractionEnabled(flag: false)
         self.activityIndicatorView.startAnimating()
-        
         
         if !SMKSongTransfer.isProperLink(link: link) {
             self.activityIndicatorView.stopAnimating()
@@ -214,17 +213,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
             self.completionWhenSongIsAlreadyInStore(song: presenceSong)
             return
         }
-            
+        
         SMKSongTransfer.sharedTransfer.transfer(link: link, completion: { (info) in
             
             guard let info = info as? [String:String],
-            let title = info["title"],
-            let artist = info["artist"],
-            let album = info["album"],
-            let imageLink = info["imageLink"],
-            let url = info["url"] else {
-                print("func startTrackingSong")
-                return
+                let title = info["title"],
+                let artist = info["artist"],
+                let album = info["album"],
+                let imageLink = info["imageLink"],
+                let url = info["url"] else {
+                    print("func startTrackingSong")
+                    return
             }
             
             var spotifyLink, appleLink, spotifyUri, appleUri: String?
@@ -265,7 +264,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 }
             }
             UIPasteboard.general.string = url
-
+            
         }, failure: { (error) in
             
             DispatchQueue.global().async {
