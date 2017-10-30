@@ -182,8 +182,8 @@ class HistoryCollectionViewController : UICollectionViewController, UICollection
         self.spotifyLinkToPasteboardButton?.tag = 0
         self.spotifyLinkToPasteboardButton?.isHidden = true
         self.spotifyLinkToPasteboardButton?.translatesAutoresizingMaskIntoConstraints = false
-        self.spotifyLinkToPasteboardButton?.backgroundColor = .clear
-        self.spotifyLinkToPasteboardButton?.setImage(UIImage.init(named: "spotifyButtonImage"), for: .normal)
+        self.spotifyLinkToPasteboardButton?.backgroundColor = .blue
+        self.spotifyLinkToPasteboardButton?.setImage(UIImage.init(named: "AppleMusicLogo"), for: .normal)
         self.spotifyLinkToPasteboardButton?.addTarget(self, action: #selector(presentShareAlertControllerBy(sender:)), for: .touchUpInside)
     }
     func configureAppleLinkButton() {
@@ -191,8 +191,8 @@ class HistoryCollectionViewController : UICollectionViewController, UICollection
         self.spotifyLinkToPasteboardButton?.tag = 1
         self.appleMusicLinkToPasteboardButton?.isHidden = true
         self.appleMusicLinkToPasteboardButton?.translatesAutoresizingMaskIntoConstraints = false
-        self.appleMusicLinkToPasteboardButton?.backgroundColor = .clear
-        self.appleMusicLinkToPasteboardButton?.setImage(UIImage.init(named: "appleButtonImage"), for: .normal)
+        self.appleMusicLinkToPasteboardButton?.backgroundColor = .blue
+        self.appleMusicLinkToPasteboardButton?.setImage(UIImage.init(named: "SpotifyLog"), for: .normal)
         self.appleMusicLinkToPasteboardButton?.addTarget(self, action: #selector(presentShareAlertControllerBy(sender:)), for: .touchUpInside)
     }
     @objc func presentShareAlertControllerBy(sender: UIButton) {

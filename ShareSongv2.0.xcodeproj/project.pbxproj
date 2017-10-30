@@ -13,7 +13,6 @@
 		E70E7FC01F40C0FF0056C3D2 /* SpotifySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70E7FBF1F40C0FF0056C3D2 /* SpotifySearch.swift */; };
 		E71328951F66F22B0032D020 /* tets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71328941F66F22B0032D020 /* tets.swift */; };
 		E71A5DB81F4384B00049E299 /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71A5DB71F4384B00049E299 /* MyUtils.swift */; };
-		E72A8BC81F5AB84C005C2939 /* autoS.png in Resources */ = {isa = PBXBuildFile; fileRef = E72A8BC71F5AB84C005C2939 /* autoS.png */; };
 		E73E75E61F65F67B0068896D /* AppleMusicSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E75E41F65F67B0068896D /* AppleMusicSearch.swift */; };
 		E73E75E91F65F69C0068896D /* SMKTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E75E81F65F69C0068896D /* SMKTransitionViewController.swift */; };
 		E73E75ED1F65F8BB0068896D /* SMKSongStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E75EC1F65F8BB0068896D /* SMKSongStore.swift */; };
@@ -36,10 +35,11 @@
 		E70865881F3CE81B0014FB95 /* set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = set.png; sourceTree = "<group>"; };
 		E708658A1F3CEECC0014FB95 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		E708658E1F3CF3B50014FB95 /* HistoryViewCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewCollectionCell.swift; sourceTree = "<group>"; };
+		E708D23F1F813D2600A0FB06 /* SpotifyLog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SpotifyLog.png; sourceTree = "<group>"; };
+		E708D2401F813D2600A0FB06 /* AppleMusicLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppleMusicLogo.png; sourceTree = "<group>"; };
 		E70E7FBF1F40C0FF0056C3D2 /* SpotifySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifySearch.swift; sourceTree = "<group>"; };
 		E71328941F66F22B0032D020 /* tets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tets.swift; path = ShareSongv2.0/tets.swift; sourceTree = "<group>"; };
 		E71A5DB71F4384B00049E299 /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
-		E72A8BC71F5AB84C005C2939 /* autoS.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = autoS.png; sourceTree = "<group>"; };
 		E73E75E41F65F67B0068896D /* AppleMusicSearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppleMusicSearch.swift; sourceTree = "<group>"; };
 		E73E75E81F65F69C0068896D /* SMKTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKTransitionViewController.swift; sourceTree = "<group>"; };
 		E73E75EC1F65F8BB0068896D /* SMKSongStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSongStore.swift; sourceTree = "<group>"; };
@@ -58,8 +58,6 @@
 		E7D059D11F3B475800BE0D19 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = up.png; path = ShareSongv2.0/up.png; sourceTree = "<group>"; };
 		E7ED2C1C1F43203C004B93E5 /* SMKSongTransfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSongTransfer.swift; sourceTree = "<group>"; };
 		E7ED2C1E1F43275B004B93E5 /* SMKFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKFilter.swift; sourceTree = "<group>"; };
-		E7F5CAEE1F813B0900C802CA /* spotifyButtonImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotifyButtonImage.png; sourceTree = "<group>"; };
-		E7F5CAEF1F813B0900C802CA /* appleButtonImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appleButtonImage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E73330591FA74063000F79D7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				E71A5DB71F4384B00049E299 /* MyUtils.swift */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
 		E7A2018A1F3F6DB500C95FC9 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,13 +116,12 @@
 				E7D059BC1F3B44DE00BE0D19 /* ShareSongv2.0 */,
 				E7D059BB1F3B44DE00BE0D19 /* Products */,
 				E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */,
-				E7F5CAEF1F813B0900C802CA /* appleButtonImage.png */,
-				E7F5CAEE1F813B0900C802CA /* spotifyButtonImage.png */,
 				E7D059CF1F3B475800BE0D19 /* down.png */,
 				E7D059D01F3B475800BE0D19 /* logo.png */,
 				E7D059D11F3B475800BE0D19 /* up.png */,
 				E70865881F3CE81B0014FB95 /* set.png */,
-				E72A8BC71F5AB84C005C2939 /* autoS.png */,
+				E708D2401F813D2600A0FB06 /* AppleMusicLogo.png */,
+				E708D23F1F813D2600A0FB06 /* SpotifyLog.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,7 +136,7 @@
 		E7D059BC1F3B44DE00BE0D19 /* ShareSongv2.0 */ = {
 			isa = PBXGroup;
 			children = (
-				E71A5DB71F4384B00049E299 /* MyUtils.swift */,
+				E73330591FA74063000F79D7 /* Utils */,
 				E7F5CAE91F81391500C802CA /* Services */,
 				E7A2018C1F3F6EA900C95FC9 /* Modal */,
 				E7A2018B1F3F6E9100C95FC9 /* View */,
@@ -223,7 +228,6 @@
 				E7D059C31F3B44DE00BE0D19 /* Main.storyboard in Resources */,
 				E70865891F3CE81B0014FB95 /* set.png in Resources */,
 				E7D059D21F3B475800BE0D19 /* down.png in Resources */,
-				E72A8BC81F5AB84C005C2939 /* autoS.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

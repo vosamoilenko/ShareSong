@@ -118,8 +118,8 @@ class SMKFilter {
         return nil
     }
     class func filterByNearly(pred: String, key: String, songs: [[String: Any]]) -> [[String: Any]]? {
-        let base = pred.clean()
-        var grades = [Int]()
+        let base = pred.clean() //
+        var grades = [Int]() //
 
         for song in songs {
             guard let target = song[key] as? String else {

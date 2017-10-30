@@ -14,7 +14,6 @@ let kSpotifYURLSearchWithTemp: String = "https://api.spotify.com/v1/search?"
 let maxRepeatSearchCount = 3
 let onlyValidBearerAuthenticationSupported = 400
 
-
 class SpotifySearch  {
     struct Client {
         let id: String = "785d0dd3031a4594895b8e72ba83548a"
@@ -25,8 +24,9 @@ class SpotifySearch  {
             let title = info["title"] as? String else {
                 fatalError("class func search")
         }
-        
+
         let encodeArtist = artist.clean().lowercased().addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
+        
         let encodeTitle = title.clean().lowercased().addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         
         var requestString = String()
@@ -98,6 +98,7 @@ class SpotifySearch  {
                 "album":  album.replacingOccurrences(of: " ", with: "+"),
                 "spotifyUri": uri]
     }
+    
     class func songInfo(trackIdentifier: String, tokenInfo: [String:Any], completion: @escaping ([String:Any]?,Bool,Error?) -> Void) {
         if tokenInfo.count == 0 {
             getToken(completion: { (token) in
@@ -178,7 +179,7 @@ class SpotifySearch  {
     class func configureRequest(url: URL?, tokenInfo: [String:Any]?) -> URLRequest {
         guard let url = url,
             let tokenInfo = tokenInfo else {
-            fatalError("class func configureRequest")
+            fatalError("missing url or tokenInfo")
         }
         let accessToken = tokenInfo["access_token"] ?? ""
         let tokenType = tokenInfo["token_type"] ?? ""
@@ -192,7 +193,6 @@ class SpotifySearch  {
     class func getToken(completion: @escaping (([String:Any]) -> Void) ) {
         let body = "grant_type=client_credentials"
         let postData = body.data(using: .utf8)
-//        let postData = body.data(using: .ascii, allowLossyConversion: true)
         
         let client = Client()
         let clientData: String = client.id + ":" + client.secret
@@ -215,9 +215,7 @@ class SpotifySearch  {
         let task: URLSessionDataTask = session.dataTask(with: request) { (data,response,error) in
             
             if error != nil {
-                
-                
-                fatalError("class func getToken")
+                fatalError("missimg token")
             } else {
                 if let data = data {
                     let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String:Any]
