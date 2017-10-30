@@ -17,6 +17,9 @@
 		E73E75E91F65F69C0068896D /* SMKTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E75E81F65F69C0068896D /* SMKTransitionViewController.swift */; };
 		E73E75ED1F65F8BB0068896D /* SMKSongStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E75EC1F65F8BB0068896D /* SMKSongStore.swift */; };
 		E74C25431F44801C00BD86C7 /* StorefrontCountries.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */; };
+		E787BBA11FA784A400A55A1B /* logofull.png in Resources */ = {isa = PBXBuildFile; fileRef = E787BBA01FA784A300A55A1B /* logofull.png */; };
+		E787BBA31FA788B800A55A1B /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = E787BBA21FA788B800A55A1B /* line.png */; };
+		E787BBA51FA78C0700A55A1B /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = E787BBA41FA78C0600A55A1B /* search.png */; };
 		E7A201851F3F1DEF00C95FC9 /* SMKSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A201841F3F1DEF00C95FC9 /* SMKSong.swift */; };
 		E7A2018E1F3F709500C95FC9 /* SMKLoadAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A2018D1F3F709500C95FC9 /* SMKLoadAnimator.swift */; };
 		E7D059BE1F3B44DE00BE0D19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D059BD1F3B44DE00BE0D19 /* AppDelegate.swift */; };
@@ -44,6 +47,9 @@
 		E73E75E81F65F69C0068896D /* SMKTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKTransitionViewController.swift; sourceTree = "<group>"; };
 		E73E75EC1F65F8BB0068896D /* SMKSongStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSongStore.swift; sourceTree = "<group>"; };
 		E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StorefrontCountries.plist; sourceTree = "<group>"; };
+		E787BBA01FA784A300A55A1B /* logofull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logofull.png; sourceTree = "<group>"; };
+		E787BBA21FA788B800A55A1B /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
+		E787BBA41FA78C0600A55A1B /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		E7A201841F3F1DEF00C95FC9 /* SMKSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSong.swift; sourceTree = "<group>"; };
 		E7A2018D1F3F709500C95FC9 /* SMKLoadAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKLoadAnimator.swift; sourceTree = "<group>"; };
 		E7D059BA1F3B44DE00BE0D19 /* ShareSongv2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareSongv2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +121,7 @@
 				E71328941F66F22B0032D020 /* tets.swift */,
 				E7D059BC1F3B44DE00BE0D19 /* ShareSongv2.0 */,
 				E7D059BB1F3B44DE00BE0D19 /* Products */,
+				E787BBA01FA784A300A55A1B /* logofull.png */,
 				E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */,
 				E7D059CF1F3B475800BE0D19 /* down.png */,
 				E7D059D01F3B475800BE0D19 /* logo.png */,
@@ -122,6 +129,8 @@
 				E70865881F3CE81B0014FB95 /* set.png */,
 				E708D2401F813D2600A0FB06 /* AppleMusicLogo.png */,
 				E708D23F1F813D2600A0FB06 /* SpotifyLog.png */,
+				E787BBA21FA788B800A55A1B /* line.png */,
+				E787BBA41FA78C0600A55A1B /* search.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -221,10 +230,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7D059D41F3B475800BE0D19 /* up.png in Resources */,
+				E787BBA31FA788B800A55A1B /* line.png in Resources */,
 				E7D059C81F3B44DE00BE0D19 /* LaunchScreen.storyboard in Resources */,
+				E787BBA11FA784A400A55A1B /* logofull.png in Resources */,
 				E74C25431F44801C00BD86C7 /* StorefrontCountries.plist in Resources */,
 				E7D059D31F3B475800BE0D19 /* logo.png in Resources */,
 				E7D059C51F3B44DE00BE0D19 /* Assets.xcassets in Resources */,
+				E787BBA51FA78C0700A55A1B /* search.png in Resources */,
 				E7D059C31F3B44DE00BE0D19 /* Main.storyboard in Resources */,
 				E70865891F3CE81B0014FB95 /* set.png in Resources */,
 				E7D059D21F3B475800BE0D19 /* down.png in Resources */,

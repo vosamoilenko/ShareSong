@@ -23,7 +23,6 @@ import MediaPlayer
 
 var resultCounter: Int = 0
 
-
 func myTest(completion: (_ result: [[String:String]]) -> Void) {
     let playlistQuery = MPMediaQuery.playlists()
     let playlists = playlistQuery.collections

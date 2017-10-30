@@ -11,33 +11,26 @@ import os.log
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var settingButton: UIButton!
-    @IBOutlet weak var roundedBackgroundLogo: UIView!
-    @IBOutlet weak var logoImage: UIView!
+
+    
+    @IBOutlet weak var decoratorLine: UIImageView!
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var backgroundBlueView: UIView!
-    @IBOutlet weak var goToHistoryViewControllerButton: UIButton!
-    @IBOutlet weak var biggerDecoratingView: UIView!
-    @IBOutlet weak var smallerDecoratingView: UIView!
     var activityIndicatorView: UIActivityIndicatorView!
     var transferManager: SMKSongTransfer?
-    @IBOutlet weak var textFieldTopConstr: NSLayoutConstraint!
     var constrainValue: CGFloat = 0.0
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUI()
-        configureSettingsButton()
         configureObservers()
         SMKSongTransfer.sharedTransfer.fetchStorefront()
         SMKSongStore.sharedStore.loadSongs()
-        self.constrainValue = self.textFieldTopConstr.constant
-        
-
+        self.constrainValue = self.bottomConstraint.constant
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         if let autoSearchStatus = UserDefaults.standard.object(forKey: "autoSearch") as? Bool,
             autoSearchStatus,
@@ -58,78 +51,31 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func prepareUI() {
-        configureRoundedBackgroundLogo()
         configureTextField()
-        configureDecoratorLines()
         configureActivityIndicatorView()
-        configureBottomButtonImage()
-        configureBackgroundBlueView()
-    }
-    func configureRoundedBackgroundLogo() {
-        self.roundedBackgroundLogo.layer.cornerRadius = self.roundedBackgroundLogo.frame.width/2.0
-    }
-    func configureBackgroundBlueView() {
-        self.backgroundBlueView.layer.cornerRadius = 15
+        self.searchButton.addTarget(self, action: #selector(ViewController.startTrackingSongFromButton(sender:)), for: .touchUpInside)
+        self.searchButton.layer.opacity = 0.8
+        self.decoratorLine.layer.opacity = 0.6
+        self.decoratorLine.layer.cornerRadius = 4
     }
     func configureTextField() {
         self.textField.delegate = self
-        
-        self.textField.layer.cornerRadius = 6;
-        self.textField.layer.borderWidth = 3;
-        self.textField.layer.borderColor = UIColor.init(red: 247/255.0, green: 150/255.0, blue: 150/255.0, alpha: 1.0).cgColor
+        self.textField.backgroundColor = .clear
         self.textField.textAlignment = .center
-        self.textField.clearButtonMode = .whileEditing;
-    }
-    func configureDecoratorLines() {
-        self.biggerDecoratingView.layer.cornerRadius = 2
-        self.smallerDecoratingView.layer.cornerRadius = 2;
     }
     func configureActivityIndicatorView() {
         self.activityIndicatorView = UIActivityIndicatorView.init(activityIndicatorStyle: UIActivityIndicatorViewStyle.gray)
         self.activityIndicatorView.center = self.view.center
         self.view.addSubview(self.activityIndicatorView)
     }
-    func configureBottomButtonImage() {
-        self.goToHistoryViewControllerButton.setImage(UIImage(named: "up"), for: .normal)
-        setConstrainsToBottomButtonImageView();
-    }
-    func setConstrainsToBottomButtonImageView() {
-        self.goToHistoryViewControllerButton.imageView?.translatesAutoresizingMaskIntoConstraints = false
-        self.goToHistoryViewControllerButton.imageView?.heightAnchor.constraint(equalToConstant: 22).isActive = true
-            self.goToHistoryViewControllerButton.imageView?.widthAnchor.constraint(equalToConstant: 36).isActive = true
-        self.goToHistoryViewControllerButton.imageView?.centerXAnchor.constraint(equalTo: self.goToHistoryViewControllerButton.centerXAnchor).isActive = true
-        self.goToHistoryViewControllerButton.imageView?.centerYAnchor.constraint(equalTo: self.goToHistoryViewControllerButton.centerYAnchor).isActive = true
-    }
-    func setMaskToBackgroundBlueView() {
-        let maskLayer: CAShapeLayer = CAShapeLayer.init()
-        let maskRect: CGRect = CGRect.init(x: 0, y: 0, width: self.backgroundBlueView.frame.size.width,
-                                           height: self.backgroundBlueView.frame.size.height)
-        let path: UIBezierPath = UIBezierPath.init()
+    
+    
 
-        let proportionMultiplierCostantForMask: CGFloat = 0.737
-        path.move(to: CGPoint(x:0, y:0))
-        path.addLine(to: CGPoint(x:maskRect.size.width, y:0))
-        path.addLine(to: CGPoint(x:maskRect.size.width, y:maskRect.size.height * proportionMultiplierCostantForMask ))
-        path.addLine(to: CGPoint(x:0, y:maskRect.size.height))
-        path.move(to: CGPoint(x:0, y:0))
-        path.close()
-        maskLayer.backgroundColor = UIColor.black.cgColor
-        maskLayer.path = path.cgPath
-        self.backgroundBlueView.layer.mask = maskLayer
-    }               
-    func configureSettingsButton() {
-        self.settingButton.addTarget(self, action: #selector(presentAutoSearchSettingAlertController), for: .touchUpInside)
+
+//    func configureSettingsButton() {
+//        self.settingButton.addTarget(self, action: #selector(presentAutoSearchSettingAlertController), for: .touchUpInside)
 //        self.settingButton.addTarget(self, action: #selector(t), for: .touchUpInside)
-    }
-    func setConstrainsToBackgroundBlueView() {
-        self.backgroundBlueView.translatesAutoresizingMaskIntoConstraints = false
-        self.backgroundBlueView.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 10).isActive = true
-        self.backgroundBlueView.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: 10).isActive = true
-        self.backgroundBlueView.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 15).isActive = true
-        self.backgroundBlueView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 133).isActive = true
-        
-        
-    }
+//    }
     // alertControllers
     func presentSuccessAlertController(message: String) {
         let alertController = UIAlertController.init(title: "Successs", message: message, preferredStyle: UIAlertControllerStyle.alert)
@@ -203,11 +149,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func changeYOfTextField(up: Bool, keyboardRectangle: CGRect) {
         let distanceForAnimtion = keyboardRectangle.height * 0.6
         if up {
-        self.textFieldTopConstr.constant = self.constrainValue - distanceForAnimtion
+            self.bottomConstraint.constant = self.constrainValue - distanceForAnimtion
+            self.decoratorLine.layer.opacity = 1.0
+            self.searchButton.layer.opacity = 1.0
         } else {
-        self.textFieldTopConstr.constant = self.constrainValue
+        self.bottomConstraint.constant = self.constrainValue
+            self.decoratorLine.layer.opacity = 0.6
+            self.searchButton.layer.opacity = 0.6
         }
-        
+
         UIView.animate(withDuration: 0.08, animations: {
             self.view.layoutIfNeeded()
         })
@@ -244,8 +194,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     func isUserInteractionEnabled(flag: Bool) {
         self.textField.isUserInteractionEnabled = flag;
-        self.settingButton.isUserInteractionEnabled = flag;
-        self.goToHistoryViewControllerButton.isUserInteractionEnabled = flag;
     }
     
     func startTrackingSong(link: String) {
@@ -338,4 +286,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+    @objc func startTrackingSongFromButton(sender: AnyObject) {
+        guard let url = UIPasteboard.general.string else { return }
+        self.startTrackingSong(link: url)
+    }
 }
+
+
