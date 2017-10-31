@@ -12,7 +12,7 @@ import UIKit
 class SMKLoadAnimator: NSObject ,UIViewControllerAnimatedTransitioning {
     //MARK: - Custom animating transition -
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
-        return 0.8
+        return 0.5
     }
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         guard let fromViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as? SMKTransitionViewController else {
@@ -32,7 +32,7 @@ class SMKLoadAnimator: NSObject ,UIViewControllerAnimatedTransitioning {
 fromViewController.logo?.transform = CGAffineTransform.init(scaleX: 0.8, y: 0.8)
             }, completion: { (Bool) in
                 UIView.animateKeyframes(withDuration: 0.4/1.0, delay: 0.6/1.0, options: .calculationModeLinear, animations: {
-                    fromViewController.logo?.transform = CGAffineTransform.init(scaleX: 50.0, y: 50.0)
+                    fromViewController.logo?.transform = CGAffineTransform.init(scaleX: 70.0, y: 70.0)
                     toViewController.view.alpha = 1.0
                 }, completion: { (Bool) in
                     transitionContext.completeTransition(true)
