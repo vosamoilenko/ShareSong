@@ -95,6 +95,7 @@ extension HistoryCollectionViewController {
         
         setConstrainsToOverlayView()
     }
+    
     func setConstrainsToOverlayView() {
         
         let margin: UILayoutGuide = self.view.layoutMarginsGuide

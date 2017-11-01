@@ -44,6 +44,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.backgroundImageView.image = getBackgroundImage()
     }
     override func viewDidAppear(_ animated: Bool) {
+        self.startLogoAnimation()
         if let autoSearchStatus = UserDefaults.standard.object(forKey: "autoSearch") as? Bool,
             autoSearchStatus,
             let url = UIPasteboard.general.string {
@@ -116,6 +117,18 @@ extension ViewController : UIViewControllerTransitioningDelegate {
     }
     
 }
+extension ViewController {
+    func startLogoAnimation() {
+        UIView.animate(withDuration: 1.0, animations: {   
+        }) { _ in
+            UIView.animate(withDuration: 1, delay: 0.25, options: [.autoreverse, .repeat], animations: {
+                self.logo.transform = CGAffineTransform.init(scaleX: 1.1, y: 1.1)
+
+            }, completion: nil)
+        }
+    }
+}
+
 extension ViewController {
     func configureObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
