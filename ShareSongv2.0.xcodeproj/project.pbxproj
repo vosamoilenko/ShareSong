@@ -35,6 +35,8 @@
 		E7D059D21F3B475800BE0D19 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D059CF1F3B475800BE0D19 /* down.png */; };
 		E7D059D31F3B475800BE0D19 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D059D01F3B475800BE0D19 /* logo.png */; };
 		E7D059D41F3B475800BE0D19 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D059D11F3B475800BE0D19 /* up.png */; };
+		E7EB2AC21FCCC8700068EC35 /* VK.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB2AC11FCCC8700068EC35 /* VK.swift */; };
+		E7EB2AC41FCCC8F40068EC35 /* songs.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7EB2AC31FCCC8F40068EC35 /* songs.txt */; };
 		E7ED2C1D1F43203C004B93E5 /* SMKSongTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ED2C1C1F43203C004B93E5 /* SMKSongTransfer.swift */; };
 		E7ED2C1F1F43275B004B93E5 /* SMKFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ED2C1E1F43275B004B93E5 /* SMKFilter.swift */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		E7D059CF1F3B475800BE0D19 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
 		E7D059D01F3B475800BE0D19 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		E7D059D11F3B475800BE0D19 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		E7EB2AC11FCCC8700068EC35 /* VK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK.swift; sourceTree = "<group>"; };
+		E7EB2AC31FCCC8F40068EC35 /* songs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = songs.txt; sourceTree = "<group>"; };
 		E7ED2C1C1F43203C004B93E5 /* SMKSongTransfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSongTransfer.swift; sourceTree = "<group>"; };
 		E7ED2C1E1F43275B004B93E5 /* SMKFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +109,7 @@
 		E78E6E461FA8CF1600AD4C08 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				E7EB2AC31FCCC8F40068EC35 /* songs.txt */,
 				E755FF741FA9429400D8AD7C /* appleButoon.png */,
 				E755FF751FA9429400D8AD7C /* spotifyButoon.png */,
 				E787BBAF1FA8833A00A55A1B /* BACK.png */,
@@ -170,6 +175,7 @@
 		E7D059BC1F3B44DE00BE0D19 /* ShareSongv2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				E7EB2AC01FCCC85D0068EC35 /* VK */,
 				E787BBAA1FA7B5BD00A55A1B /* Animator */,
 				E73330591FA74063000F79D7 /* Utils */,
 				E7F5CAE91F81391500C802CA /* Services */,
@@ -184,6 +190,14 @@
 				E7D059C91F3B44DE00BE0D19 /* Info.plist */,
 			);
 			path = ShareSongv2.0;
+			sourceTree = "<group>";
+		};
+		E7EB2AC01FCCC85D0068EC35 /* VK */ = {
+			isa = PBXGroup;
+			children = (
+				E7EB2AC11FCCC8700068EC35 /* VK.swift */,
+			);
+			name = VK;
 			sourceTree = "<group>";
 		};
 		E7F5CAE91F81391500C802CA /* Services */ = {
@@ -257,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E787BBB01FA8833A00A55A1B /* BACK.png in Resources */,
+				E7EB2AC41FCCC8F40068EC35 /* songs.txt in Resources */,
 				E7D059D41F3B475800BE0D19 /* up.png in Resources */,
 				E787BBA31FA788B800A55A1B /* line.png in Resources */,
 				E755FF761FA9429400D8AD7C /* appleButoon.png in Resources */,
@@ -290,6 +305,7 @@
 				E787BBA91FA7B5B800A55A1B /* SMKTransitionAnimator.swift in Sources */,
 				E787BBD71FA8BBF900A55A1B /* ShareSong.xcdatamodeld in Sources */,
 				E7D059C01F3B44DE00BE0D19 /* ViewController.swift in Sources */,
+				E7EB2AC21FCCC8700068EC35 /* VK.swift in Sources */,
 				E7D059BE1F3B44DE00BE0D19 /* AppDelegate.swift in Sources */,
 				E70E7FC01F40C0FF0056C3D2 /* SpotifySearch.swift in Sources */,
 				E7ED2C1D1F43203C004B93E5 /* SMKSongTransfer.swift in Sources */,

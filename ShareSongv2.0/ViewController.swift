@@ -31,6 +31,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        getSongs()
+        oauth()
+        
+        
+        
+        
         prepareUI()
         swipeRecognizerConfiguration()
         configureObservers()
