@@ -11,7 +11,7 @@ import Foundation
 
 struct Client {
     let id: String = "785d0dd3031a4594895b8e72ba83548a"
-    let redirect: String = "tranferSpotify://callback"
+    let redirect: String = "https://transferSpotify.com/callback"
     let secret: String = "23ed8ea00a54403baabed39b408fcce8"
 }
 

@@ -10,6 +10,21 @@ import Foundation
 
 class SMKFilter {
     class func filter(pred: [String: Any], songs: [[String: Any]]) -> [[String: Any]]? {
+        // pred - uslovie
+        // songs (data) <- work with
+        
+        // work 00111
+
+        // woork  3
+        // werk 1
+        // worf 1
+//        after missing
+        // werk 1
+        // worf 1
+//        after hits
+        
+        
+        print(songs)
 
         var filtred : [[String:Any]]?
         

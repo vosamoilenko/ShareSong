@@ -10,16 +10,12 @@ import Foundation
 import UIKit
 import os.log
 
-// TODO: add spotify URI and apple URI
 class SMKSongStore {
-    //MARK: - Propperties -
+
     var store: [SMKSong]
-    //MARK: - Singeltone -
     static let sharedStore = SMKSongStore()
     
     private init() {
-    //FIX: Why?
-        
         let documentDirectory = FileManager().urls(for: .documentDirectory, in: .userDomainMask).first!
         let archieveUrl = documentDirectory.appendingPathComponent("song")
         

@@ -74,6 +74,7 @@
 		E7D059D11F3B475800BE0D19 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
 		E7EB2AC11FCCC8700068EC35 /* VK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK.swift; sourceTree = "<group>"; };
 		E7EB2AC31FCCC8F40068EC35 /* songs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = songs.txt; sourceTree = "<group>"; };
+		E7EB2AC61FCCE6160068EC35 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E7ED2C1C1F43203C004B93E5 /* SMKSongTransfer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSongTransfer.swift; sourceTree = "<group>"; };
 		E7ED2C1E1F43275B004B93E5 /* SMKFilter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -161,6 +162,7 @@
 				E7D059BB1F3B44DE00BE0D19 /* Products */,
 				E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */,
 				E78E6E461FA8CF1600AD4C08 /* res */,
+				E7EB2AC51FCCE6160068EC35 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,6 +200,14 @@
 				E7EB2AC11FCCC8700068EC35 /* VK.swift */,
 			);
 			name = VK;
+			sourceTree = "<group>";
+		};
+		E7EB2AC51FCCE6160068EC35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7EB2AC61FCCE6160068EC35 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E7F5CAE91F81391500C802CA /* Services */ = {
@@ -449,6 +459,7 @@
 				DEVELOPMENT_TEAM = 7JW64WU539;
 				INFOPLIST_FILE = ShareSongv2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = SMK.ShareSong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
@@ -463,6 +474,7 @@
 				DEVELOPMENT_TEAM = 7JW64WU539;
 				INFOPLIST_FILE = ShareSongv2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = SMK.ShareSong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;

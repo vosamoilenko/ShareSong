@@ -9,40 +9,8 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/ViewController.swift"
-            timestampString = "533521565.980891"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/ViewController.swift"
-            timestampString = "533521565.981446"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "viewDidLoad()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533521565.981899"
+            timestampString = "533842696.759592"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
@@ -58,7 +26,7 @@
                   moduleName = "ShareSongv2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/Services/SpotifySearch.swift"
-                  timestampString = "533521566.301514"
+                  timestampString = "536342427.23351"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "50"
@@ -73,7 +41,7 @@
                   moduleName = "ShareSongv2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/Services/SpotifySearch.swift"
-                  timestampString = "533521566.316266"
+                  timestampString = "536342427.236007"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
@@ -90,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533521565.982596"
+            timestampString = "533842696.760053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "60"
@@ -106,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShareSongv2.0/tets.swift"
-            timestampString = "533521565.983301"
+            timestampString = "533843745.309696"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -122,7 +90,7 @@
                   moduleName = "ShareSongv2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/tets.swift"
-                  timestampString = "533521566.343086"
+                  timestampString = "536342427.253848"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -137,7 +105,7 @@
                   moduleName = "ShareSongv2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/tets.swift"
-                  timestampString = "533521566.346012"
+                  timestampString = "536342427.258941"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -154,7 +122,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533521565.984137"
+            timestampString = "533842696.760396"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "52"
@@ -170,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533521565.984648"
+            timestampString = "533842696.760685"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
@@ -186,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533521565.985492"
+            timestampString = "533842696.761019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
@@ -202,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533521565.988906"
+            timestampString = "533842696.761529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -217,62 +185,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/tets.swift"
-            timestampString = "533521565.990343"
+            filePath = "ShareSongv2.0/SMKFilter.swift"
+            timestampString = "536342426.983457"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "oauth()"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/tets.swift"
-            timestampString = "533521565.992121"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "oauth()"
-            landmarkType = "9">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShareSongv2_0.oauth() -&gt; ()"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/tets.swift"
-                  timestampString = "533521566.377898"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "23"
-                  endingLineNumber = "23"
-                  offsetFromSymbolStart = "889">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ShareSongv2_0.oauth() -&gt; ()"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/tets.swift"
-                  timestampString = "533521566.380583"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "24"
-                  endingLineNumber = "24"
-                  offsetFromSymbolStart = "34">
-               </Location>
-            </Locations>
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "filter(pred:songs:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

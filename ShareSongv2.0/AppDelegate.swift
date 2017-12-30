@@ -10,6 +10,8 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    
 
     var window: UIWindow?
 
@@ -21,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func applicationWillEnterForeground(_ application: UIApplication) {
-        NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: "autoSearch")))
+        // RETURN BACK
+//        NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: "autoSearch")))
     }
     func applicationDidEnterBackground(_ application: UIApplication) {
         if !SMKSongStore.sharedStore.saveChanges() {
