@@ -21,8 +21,7 @@ class SMKFilter {
 //        after missing
         // werk 1
         // worf 1
-//        after hits
-        
+//        after hit
         
         print(songs)
 
