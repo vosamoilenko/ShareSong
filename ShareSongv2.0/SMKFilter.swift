@@ -59,7 +59,7 @@ class SMKFilter {
         return filtred
     }
     class func filterByHits(pred: String, key: String, songs: [[String: Any]]) -> [[String: Any]]? {
-        
+        //some comment
         let base = pred.beforeParenthesis().clean()
         var grades = [Int]()
         var songsAfterFiltering : [[String: Any]] = Array()
