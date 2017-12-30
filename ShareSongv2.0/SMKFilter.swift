@@ -3,7 +3,7 @@
 //  ShareSongv2.0
 //
 //  Created by Vo1 on 15/08/2017.
-//  Copyright © 2017 Samoilenko Volodymyr. All rights reserved.
+//  Copyright © 2017 Samoilenko Volodymyr. All rights reserved. lmao  big mum's programmer
 //
 
 import Foundation
