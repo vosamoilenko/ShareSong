@@ -297,6 +297,7 @@ extension ViewController {
         self.isUserInteractionEnabled(flag: false)
         self.activityIndicatorView.startAnimating()
         
+        // if link wasn't correct
         if !SMKSongTransfer.isProperLink(link: link) {
             self.activityIndicatorView.stopAnimating()
             self.presentWrongLinkAlertController()
@@ -305,6 +306,7 @@ extension ViewController {
             return
         }
         
+        // if link is already in "db"
         if let presenceSong = SMKSongStore.sharedStore.songByLink(link: link) {
             self.completionWhenSongIsAlreadyInStore(song: presenceSong)
             return

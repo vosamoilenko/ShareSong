@@ -13,59 +13,28 @@
 
 import Foundation
 
-class SMKFilter {
-    class func filter(pred: [String: Any], songs: [[String: Any]]) -> [[String: Any]]? {
-//        print(JWDistance(first: "", second:""))             // = 0.0
-//        print(JWDistance(first: "",second:"a"))            //  = 0.0
-//        print(JWDistance(first: "aaapppp", second:""))   //    = 0.0
-//        print(JWDistance(first: "frog", second:"fog"))     //  = 0.93
-//        print(JWDistance(first: "fly", second:"ant"))    //    = 0.0
-//        print(JWDistance(first: "elephant",second: "hippo")) //= 0.44
-//        print(JWDistance(first: "hippo", second:"elephant"))// = 0.44
-//        print(JWDistance(first: "hippo", second:"zzzzzzzz")) //= 0.0
-//        print(JWDistance(first: "hello", second:"hallo"))  //  = 0.88
-//        print(JWDistance(first: "ABC Corporation", second:"ABC Corp")) //= 0.93
-//        print(JWDistance(first: "D N H Enterprises Inc", second:"D &amp; H Enterprises, Inc.")) //= 0.95
-//        print(JWDistance(first: "My Gym Children's Fitness Center",second: "My Gym. Childrens Fitness"))// = 0.92
-//        print(JWDistance(first: "PENNSYLVANIA",second: "PENNCISYLVNIA"))  //  = 0.88
-        var filtred : [[String:Any]]?
-        
-        let keys = ["artist","album","title"]
-        
-        for key in keys {
-            if pred[key] != nil {
-                
-                let predicate = pred[key] as? String
-                
-                if filtred == nil {
-                    filtred = songs
-                }
-                
-                filtred = filterByMissing(pred: predicate!, key: key, songs: filtred!)
-                
-                if filtred == nil {
-                    filtred = songs
-                }
-                
-                filtred = filterByHits(pred: predicate!, key: key, songs: filtred!)
-                
-                if filtred == nil {
-                    filtred = filterByNearly(pred: predicate!, key: key, songs: songs)
-                } else if filtred?.count == 1 {
-                    break
-                }
-            }
-        }
-        guard filtred != nil else {
-            return nil
-        }
-        
-        return filtred
-    }
+
+
+class JWDistance {
+    //        print(JWDistance(first: "", second:""))             // = 0.0
+    //        print(JWDistance(first: "",second:"a"))            //  = 0.0
+    //        print(JWDistance(first: "aaapppp", second:""))   //    = 0.0
+    //        print(JWDistance(first: "frog", second:"fog"))     //  = 0.93
+    //        print(JWDistance(first: "fly", second:"ant"))    //    = 0.0
+    //        print(JWDistance(first: "elephant",second: "hippo")) //= 0.44
+    //        print(JWDistance(first: "hippo", second:"elephant"))// = 0.44
+    //        print(JWDistance(first: "hippo", second:"zzzzzzzz")) //= 0.0
+    //        print(JWDistance(first: "hello", second:"hallo"))  //  = 0.88
+    //        print(JWDistance(first: "ABC Corporation", second:"ABC Corp")) //= 0.93
+    //        print(JWDistance(first: "D N H Enterprises Inc", second:"D &amp; H Enterprises, Inc.")) //= 0.95
+    //        print(JWDistance(first: "My Gym Children's Fitness Center",second: "My Gym. Childrens Fitness"))// = 0.92
+    //        print(JWDistance(first: "PENNSYLVANIA",second: "PENNCISYLVNIA"))  //  = 0.88
     
-    class func JWDistance(first: String, second: String) -> Double {
+    class func distance(first: String, second: String) -> Double {
+        
         if (first.isEmpty || second.isEmpty) {
             //exception? string shouldn't be empty
+            // fisrt and second are not optionals, no exceptions because of nil ;)
             return 0.0
         }
         
@@ -77,6 +46,12 @@ class SMKFilter {
             mins = first
             maxs = second
         }
+        
+        // to lower register
+        mins = mins.lowercased()
+        maxs = maxs.lowercased()
+        
+        
         let range = Int(max(maxs.count / 2 - 1, 0))
         var matchIndexes = Array(repeating: -1, count: mins.count)
         var matchFlags = Array(repeating: false, count: maxs.count)
@@ -99,7 +74,7 @@ class SMKFilter {
                 xi += 1;
             }
         }
-
+        
         var ms1 = [Character]()
         var ms2 = [Character]()
         //filling matches in min string
@@ -138,8 +113,8 @@ class SMKFilter {
         
         let md = Double(matches)
         let jaroValue = (md/Double(first.count) +
-                                md/Double(second.count) +
-                                (md - Double(transpositions))/md) / 3.0
+            md/Double(second.count) +
+            (md - Double(transpositions))/md) / 3.0
         
         let scalingFactor = 0.1
         let threshold = 0.7
@@ -150,128 +125,88 @@ class SMKFilter {
         return jaroWinklerValue
     }
     
-    class func filterByHits(pred: String, key: String, songs: [[String: Any]]) -> [[String: Any]]? {
-        let base = pred.beforeParenthesis().clean()
-        var grades = [Int]()
-        var songsAfterFiltering : [[String: Any]] = Array()
+}
+
+class Holder {
+    var song: [String:Any]
+    var distance: Array<Double>
+    
+    init(_ song:[String:Any],_ pred:[String:Any] ) {
+        self.song = song
+        self.distance = Array.init()
+        self.fillDistance(pred: pred)
+    }
+    func fillDistance(pred:[String:Any]) {
+        // title, artist, album
+        for (key, value) in pred {
+            guard var str1 = value as? String,var str2 = song[key] as? String else { fatalError("nil") }
+            str1 = str1.clean()
+            str2 = str2.clean()
+            
+            self.distance.append(JWDistance.distance(first: str1, second: str2))
+        }
+    }
+    func sum() -> Double {
+        return distance[0] + distance[1]
+    }
+    func sumFull() -> Double {
+        return distance[0] + distance[1] + distance[2]
+    }
+    var description: String {
+        var x : String = "\(distance[0]) \(distance[1]) \(distance[2])\n"
+        x += "\(song["title"]!) \(song["artist"]!) \(song["album"]!)"
+        return x
+    }
+}
+
+class SMKFilter {
+    class func filter(pred: [String: Any], songs: [[String: Any]]) -> [[String: Any]]? {
+
+        var sorted: Array<Holder>?
+        var holders = Array<Holder>()
+        let filtred: [[String:Any]]?
         
         for song in songs {
-            guard let str = song[key] as? String else {
-                fatalError("class func filterByHits")
-            }
-            let components = str.clean().components(separatedBy: " ")
-            
-            var hits = 0
-            
-            for component in components {
-                if base.contains(component) {
-                    hits += 1
-                }
-            }
-            grades.append(hits)
-            
+            holders.append(Holder.init(song, pred))
         }
         
-        let maxHits = base.components(separatedBy: " ").count
-        
-        for counter in 0..<songs.count {
-            if grades[counter] >= maxHits {
-                songsAfterFiltering.append(songs[counter])
-            }
-        }
-        if songsAfterFiltering.count > 0 {
-            return songsAfterFiltering
-        }
-        return nil
-    }
-    class func filterByMissing(pred: String, key: String, songs: [[String: Any]]) -> [[String: Any]]? {
-        let base = pred.clean()
-        var grades = [Int]()
-        var minMisses = 100;
-        var songsAfterFiltering : [[String: Any]] = Array()
-        
-        for song in songs {
-            
-            guard let str = song[key] as? String else {
-                fatalError("error: guard line:91")
-            }
+        sorted = holders.sorted(by: { (a, b) -> Bool in
+            return a.sum() > b.sum()
+        })
 
-            let components = str.clean().components(separatedBy: " ")
-            
-            var misses = 0
-            
-            for component in components {
-                if !base.contains(component) {
-                    misses += 1
-                }
-            }
-            if misses < minMisses {
-                minMisses = misses
-            }
-            grades.append(misses)
-        }
+        guard sorted != nil else { fatalError("nil") }
         
-        for counter in 0..<songs.count {
-            if grades[counter] == minMisses {
-                songsAfterFiltering.append(songs[counter])
-            }
-        }
-        
-        if songsAfterFiltering.count != 0 {
-            return songsAfterFiltering
-        }
-        return nil
-    }
-    class func filterByNearly(pred: String, key: String, songs: [[String: Any]]) -> [[String: Any]]? {
-        let base = pred.clean() //
-        var grades = [Int]() //
-
-        for song in songs {
-            guard let target = song[key] as? String else {
-                fatalError("class func filterByNearly")
-            }
-            let str = target.clean()
-            var hits = 0
-            
-            for counter in 0..<str.characters.count {
-                if counter == base.characters.count {
-                    break
-                }
-                if str[counter] == base[counter] {
-                    hits += 1
-                } else {
-                    break
-                }
-            }
-            grades.append(hits)
-        }
-        var nearly = 0
-        
-        for counter in 1..<grades.count {
-            if grades[nearly] < grades[counter] {
-                nearly = counter
-            }
-        }
-        if nearly != 0 {
-            return [songs[nearly]]
-        }
-        return nil
-    }
-
-    class func isEqual(one: [String: Any], to: [String: Any]) -> Bool {
-        let title = "title"
-        let artist = "artist"
-        guard let titleOne = one[title] as? String,
-        let titleTo = to[title] as? String,
-        let artistOne = one[artist] as? String,
-        let artistTo = to[artist] as? String else {
-            fatalError("guard error line:163")
-        }
-        
-        let commonOne = titleOne.clean().withoutWhitescapes() + artistOne.clean().withoutWhitescapes()
-        let commonTo = titleTo.clean().withoutWhitescapes() + artistTo.clean().withoutWhitescapes()
-        
-        return commonOne == commonTo
+        filtred = SMKFilter.extract(from: sorted!, by: [2.9, 2.4])
+        return filtred
     }
     
+    static func extract(from holders: Array<Holder>, by limits: Array<Double>) -> [[String:Any]]? {
+        var extracted = [[String:Any]]()
+        var buffer = Array<Holder>()
+        
+        
+        for limit in limits {
+            
+            for holder in holders {
+                if holder.sumFull() >= limit {
+                    buffer.append(holder)
+                }
+            }
+            
+            if buffer.count == 1 {
+                extracted.append(buffer[0].song)
+                return extracted
+            }
+            
+            if buffer.count >= 1 {
+                for holder in buffer {
+                    extracted.append(holder.song)
+                }
+                return extracted
+            }
+        }
+        return nil
+    }
 }
+
+
