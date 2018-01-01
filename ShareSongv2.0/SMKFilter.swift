@@ -171,7 +171,7 @@ class SMKFilter {
         }
         
         sorted = holders.sorted(by: { (a, b) -> Bool in
-            return a.sum() > b.sum()
+            return a.sumFull() > b.sumFull()
         })
 
         guard sorted != nil else { fatalError("nil") }
