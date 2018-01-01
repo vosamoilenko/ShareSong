@@ -17,68 +17,6 @@
             endingLineNumber = "39"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "variable initialization expression of ShareSongv2_0.ViewController.kURL : Swift.String"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/ViewController.swift"
-                  timestampString = "536344153.258314"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShareSongv2_0.ViewController.kURL.getter : Swift.String"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/ViewController.swift"
-                  timestampString = "536344153.26087"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "128">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShareSongv2_0.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; ShareSongv2_0.ViewController"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/ViewController.swift"
-                  timestampString = "536344153.264132"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "1732">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShareSongv2_0.ViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;ShareSongv2_0.ViewController&gt;"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/ViewController.swift"
-                  timestampString = "536344153.27248"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "1591">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -95,68 +33,6 @@
             endingLineNumber = "34"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShareSongv2_0.ViewController.constrainValueBlurView.getter : CoreGraphics.CGFloat"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/ViewController.swift"
-                  timestampString = "536344153.293439"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "99">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShareSongv2_0.ViewController.constrainValueBlurView.setter : CoreGraphics.CGFloat"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/ViewController.swift"
-                  timestampString = "536344153.295712"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "106">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShareSongv2_0.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; ShareSongv2_0.ViewController"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/ViewController.swift"
-                  timestampString = "536344153.29895"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "1557">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "ShareSongv2_0.ViewController.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;ShareSongv2_0.ViewController&gt;"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/ViewController.swift"
-                  timestampString = "536344153.310096"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "1422">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -182,12 +58,12 @@
                   moduleName = "ShareSongv2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/Services/SpotifySearch.swift"
-                  timestampString = "536344153.327825"
+                  timestampString = "536537849.715129"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "50"
                   endingLineNumber = "50"
-                  offsetFromSymbolStart = "4629">
+                  offsetFromSymbolStart = "3472">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -197,12 +73,12 @@
                   moduleName = "ShareSongv2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/Services/SpotifySearch.swift"
-                  timestampString = "536344153.330546"
+                  timestampString = "536537849.717269"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "51"
                   endingLineNumber = "51"
-                  offsetFromSymbolStart = "80">
+                  offsetFromSymbolStart = "72">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -246,12 +122,12 @@
                   moduleName = "ShareSongv2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/tets.swift"
-                  timestampString = "536344153.509129"
+                  timestampString = "536537849.728146"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
                   endingLineNumber = "49"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "352">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -261,12 +137,12 @@
                   moduleName = "ShareSongv2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/tets.swift"
-                  timestampString = "536344153.512236"
+                  timestampString = "536537849.730518"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
                   endingLineNumber = "49"
-                  offsetFromSymbolStart = "448">
+                  offsetFromSymbolStart = "400">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -374,12 +250,12 @@
                   moduleName = "ShareSongv2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/tets.swift"
-                  timestampString = "536344153.550997"
+                  timestampString = "536537849.756745"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "23"
                   endingLineNumber = "23"
-                  offsetFromSymbolStart = "889">
+                  offsetFromSymbolStart = "676">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -389,12 +265,12 @@
                   moduleName = "ShareSongv2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/tets.swift"
-                  timestampString = "536344153.555795"
+                  timestampString = "536537849.758809"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "24"
                   endingLineNumber = "24"
-                  offsetFromSymbolStart = "34">
+                  offsetFromSymbolStart = "36">
                </Location>
             </Locations>
          </BreakpointContent>
