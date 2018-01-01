@@ -9,11 +9,6 @@
 import UIKit
 import os.log
 
-// func startTrackingSong(link: String) {
-
-
-//
-
 class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var swipeRecognizerDown: UISwipeGestureRecognizer!
@@ -38,6 +33,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         prepareUI()
         swipeRecognizerConfiguration()
         configureObservers()
@@ -51,6 +47,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.backgroundImageView.image = getBackgroundImage()
     }
     override func viewDidAppear(_ animated: Bool) {
+        self.startLogoAnimation()
+                if let autoSearchStatus = UserDefaults.standard.object(forKey: "autoSearch") as? Bool,
+                    autoSearchStatus,
+                    let url = UIPasteboard.general.string {
+                        DispatchQueue.once(token: "primary-search", block: {
+                            startTrackingSong(link: url)
+                        })
+                }
         if let autoSearchStatus = UserDefaults.standard.object(forKey: "autoSearch") as? Bool,
             autoSearchStatus,
             let url = UIPasteboard.general.string {
@@ -119,7 +123,7 @@ extension ViewController : UIViewControllerTransitioningDelegate {
         if let img = NSKeyedUnarchiver.unarchiveObject(withFile: archieveUrl.path) as? UIImage {
             return img
         }
-        return UIImage.init(named: "BACK")
+        return UIImage.init()
     }
     
 }

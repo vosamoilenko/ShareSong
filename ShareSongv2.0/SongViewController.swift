@@ -8,11 +8,26 @@
 import UIKit
 import Foundation
 
+
+class GradientView: UIView {
+    override open class var layerClass: AnyClass {
+        return CAGradientLayer.classForCoder()
+    }
+    required override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    func setGradient(colors: [CGColor]) {
+        let gradientLayer = self.layer as! CAGradientLayer
+        gradientLayer.colors = colors
+    }
+}
+
 class SongViewController : UIViewController {
-    var appleMusicLink = String()
-    var spotifyLink = String()
-    var appleUri = String()
-    var spotifyUri = String()
     var backgroundImageView = UIImageView()
     var blurView = UIVisualEffectView()
     
@@ -21,13 +36,48 @@ class SongViewController : UIViewController {
     var artistLabel = UILabel.init(frame: .zero)
     var spotifyButton = UIButton.init(frame: .zero)
     var appleButton = UIButton.init(frame: .zero)
+
     var song: SMKSong?
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         addViews()
         configureButtons()
         configureSwipeRecognizer()
         setConstrains()
+        
+        
+        self.titleLabel.numberOfLines = 3
+        self.titleLabel.font = UIFont.init(name: "Helvetica", size: 20)
+        self.artistLabel.font = UIFont.init(name: "Helvetica", size: 18)
+        
+        self.titleLabel.textColor = .white
+        self.artistLabel.textColor = .white
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        self.imageView.layer.cornerRadius = self.imageView.frame.size.width / 2
+        self.imageView.layer.masksToBounds = true
+        self.imageView.layer.borderColor = UIColor.white.cgColor
+        self.imageView.layer.borderWidth = 8
+        
+        startImageAnimation()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    
+    func startImageAnimation() {
+        UIView.animate(withDuration: 1.0, animations: {
+        }) { _ in
+            UIView.animate(withDuration: 1, delay: 0.25, options: [.autoreverse, .repeat], animations: {
+                self.imageView.transform = CGAffineTransform.init(scaleX: 1.1, y: 1.1)
+            }, completion: nil)
+        }
     }
     
     fileprivate func addViews() {
@@ -76,12 +126,6 @@ class SongViewController : UIViewController {
     }
     func set(_ song: SMKSong) {
         self.song = song
-        
-        self.appleMusicLink = song.appleLink!
-        self.appleUri = song.appleUri!
-        
-        self.spotifyLink = song.spotifyLink!
-        self.spotifyUri = song.spotifyUri!
         self.imageView.image = song.image
         
         titleLabel.text = song.title
@@ -92,7 +136,6 @@ class SongViewController : UIViewController {
     fileprivate func setConstrains() {
         let margin: UILayoutGuide = self.view.layoutMarginsGuide
         let distanceBetweenButtons = self.view.frame.size.width / 6.5
-        let paddingBottomInView: CGFloat = 100.0
         
         self.backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
         self.blurView.translatesAutoresizingMaskIntoConstraints = false
@@ -111,31 +154,35 @@ class SongViewController : UIViewController {
         self.blurView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         self.blurView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
         self.blurView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        
+
         self.imageView.topAnchor.constraint(equalTo: margin.topAnchor, constant: 80).isActive = true
         self.imageView.leftAnchor.constraint(greaterThanOrEqualTo: margin.leftAnchor, constant: 50).isActive = true
         self.imageView.centerXAnchor.constraint(equalTo: margin.centerXAnchor).isActive = true
         self.imageView.heightAnchor.constraint(equalTo: self.imageView.widthAnchor, multiplier: 1.0).isActive = true
-        
-        self.titleLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: 30).isActive = true
+
+        self.titleLabel.topAnchor.constraint(equalTo: self.imageView.bottomAnchor, constant: self.view.frame.size.height * 0.1).isActive = true
         self.titleLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         self.titleLabel.widthAnchor.constraint(equalTo: margin.widthAnchor, multiplier: 0.8).isActive = true
-        
-        self.artistLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 20).isActive = true
+
+        self.artistLabel.topAnchor.constraint(equalTo: self.titleLabel.bottomAnchor, constant: 10).isActive = true
         self.artistLabel.centerXAnchor.constraint(equalTo: self.titleLabel.centerXAnchor).isActive = true
         self.artistLabel.widthAnchor.constraint(equalTo: margin.widthAnchor, multiplier: 0.8).isActive = true
-        
+
         self.spotifyButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         self.spotifyButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         self.appleButton.widthAnchor.constraint(equalToConstant: 50).isActive = true
         self.appleButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
 
-        self.spotifyButton.bottomAnchor.constraint(equalTo: margin.bottomAnchor, constant: -paddingBottomInView).isActive = true
-        self.appleButton.bottomAnchor.constraint(equalTo: margin.bottomAnchor, constant: -paddingBottomInView).isActive = true
+        self.spotifyButton.bottomAnchor.constraint(equalTo: margin.bottomAnchor, constant: -self.view.frame.size.height * 0.1).isActive = true
+        self.appleButton.bottomAnchor.constraint(equalTo: margin.bottomAnchor, constant: -self.view.frame.size.height * 0.1).isActive = true
 
+//        self.spotifyButton.topAnchor.constraint(equalTo: artistLabel.bottomAnchor, constant: self.view.frame.size.height * 0.1).isActive = true
+//        self.appleButton.topAnchor.constraint(equalTo: artistLabel.bottomAnchor, constant: self.view.frame.size.height * 0.1).isActive = true
+        
+        
         self.spotifyButton.rightAnchor.constraint(equalTo: margin.centerXAnchor, constant: -distanceBetweenButtons).isActive = true
         self.appleButton.leftAnchor.constraint(equalTo: margin.centerXAnchor, constant: distanceBetweenButtons).isActive = true
-        
+
         
     }
     @objc  fileprivate func dissmiss() {
@@ -150,25 +197,25 @@ class SongViewController : UIViewController {
         var cancelAction: UIAlertAction?
         
         print(sender.tag)
-        if sender.tag == 0 {
+        if sender.tag == 1 {
             copyAction = UIAlertAction.init(title: "Copy to clipboard", style: .default) { (copy) in
-                UIPasteboard.general.string = self.appleMusicLink
+                UIPasteboard.general.string = self.song?.appleLink
                 self.dismiss(animated: true, completion: nil)
             }
 
             redirectAction = UIAlertAction.init(title: "Open in Apple Music", style: .destructive, handler: { (openInApp) in
-                let url = URL.init(string:self.appleUri)
+                let url = URL.init(string:(self.song?.appleUri)!)
                 UIApplication.shared.open(url!, options: [:], completionHandler: { (b) in
                     self.dismiss(animated: true, completion: nil)
                 })
             })
         } else {
             copyAction = UIAlertAction.init(title: "Copy to clipboard", style: .default) { (copy) in
-                UIPasteboard.general.string = self.spotifyLink
+                UIPasteboard.general.string = self.song?.spotifyLink
                 self.dismiss(animated: true, completion: nil)
             }
             redirectAction = UIAlertAction.init(title: "Open in Spotify", style: .destructive, handler: { (openInApp) in
-                let url = URL.init(string:self.spotifyUri)
+                let url = URL.init(string:(self.song?.spotifyUri)!)
                 UIApplication.shared.open(url!, options: [:], completionHandler: { (b) in
                 self.dismiss(animated: true, completion: nil)
                 })
