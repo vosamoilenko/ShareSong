@@ -56,8 +56,7 @@ class SpotifySearch  {
             guard json != nil else {
                 fatalError("session.dataTask")
             }
-            
-            print(json)
+
             
             if isNeedToUpdateToken(tokenInfo: json) {
                 updateToken(response: json, completion: { (token) in

@@ -23,8 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // RETURN BACK
-//        NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: "autoSearch")))
+        NotificationCenter.default.post(Notification.init(name: Notification.Name(rawValue: "autoSearch")))
     }
     func applicationDidEnterBackground(_ application: UIApplication) {
         if !SMKSongStore.sharedStore.saveChanges() {

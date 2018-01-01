@@ -33,10 +33,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     var constrainValueBlurView: CGFloat = 0.0
     var constrainValue: CGFloat = 0.0
-    
-    ////////
-    
-    let kURL = "https://open.spotify.com/track/0uOPGU4CbYxzFxn6T7sblW"
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,15 +51,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.backgroundImageView.image = getBackgroundImage()
     }
     override func viewDidAppear(_ animated: Bool) {
-        self.startLogoAnimation()
-//        self.startTrackingSong(link: kURL)
-//        if let autoSearchStatus = UserDefaults.standard.object(forKey: "autoSearch") as? Bool,
-//            autoSearchStatus,
-//            let url = UIPasteboard.general.string {
-//                DispatchQueue.once(token: "primary-search", block: {
-//                    startTrackingSong(link: url)
-//                })
-//        }
+        if let autoSearchStatus = UserDefaults.standard.object(forKey: "autoSearch") as? Bool,
+            autoSearchStatus,
+            let url = UIPasteboard.general.string {
+                DispatchQueue.once(token: "primary-search", block: {
+                    startTrackingSong(link: url)
+                })
+        }
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.textField.resignFirstResponder()
@@ -385,7 +380,7 @@ extension ViewController {
     }
     @objc func startTrackingSongFromButton(sender: AnyObject) {
         guard let url = UIPasteboard.general.string else { return }
-        self.startTrackingSong(link: kURL)
+        self.startTrackingSong(link: url)
     }
 }
 

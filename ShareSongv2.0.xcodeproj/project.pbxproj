@@ -17,8 +17,9 @@
 		E73E75E91F65F69C0068896D /* SMKTransitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E75E81F65F69C0068896D /* SMKTransitionViewController.swift */; };
 		E73E75ED1F65F8BB0068896D /* SMKSongStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73E75EC1F65F8BB0068896D /* SMKSongStore.swift */; };
 		E74C25431F44801C00BD86C7 /* StorefrontCountries.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */; };
-		E755FF761FA9429400D8AD7C /* appleButoon.png in Resources */ = {isa = PBXBuildFile; fileRef = E755FF741FA9429400D8AD7C /* appleButoon.png */; };
-		E755FF771FA9429400D8AD7C /* spotifyButoon.png in Resources */ = {isa = PBXBuildFile; fileRef = E755FF751FA9429400D8AD7C /* spotifyButoon.png */; };
+		E755FF761FA9429400D8AD7C /* appleButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E755FF741FA9429400D8AD7C /* appleButton.png */; };
+		E755FF771FA9429400D8AD7C /* spotifyButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E755FF751FA9429400D8AD7C /* spotifyButton.png */; };
+		E77ADA171FFA9208009F306D /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77ADA161FFA9208009F306D /* SongViewController.swift */; };
 		E787BBA31FA788B800A55A1B /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = E787BBA21FA788B800A55A1B /* line.png */; };
 		E787BBA51FA78C0700A55A1B /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = E787BBA41FA78C0600A55A1B /* search.png */; };
 		E787BBA91FA7B5B800A55A1B /* SMKTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787BBA81FA7B5B800A55A1B /* SMKTransitionAnimator.swift */; };
@@ -52,8 +53,9 @@
 		E73E75E81F65F69C0068896D /* SMKTransitionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKTransitionViewController.swift; sourceTree = "<group>"; };
 		E73E75EC1F65F8BB0068896D /* SMKSongStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSongStore.swift; sourceTree = "<group>"; };
 		E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StorefrontCountries.plist; sourceTree = "<group>"; };
-		E755FF741FA9429400D8AD7C /* appleButoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appleButoon.png; sourceTree = "<group>"; };
-		E755FF751FA9429400D8AD7C /* spotifyButoon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotifyButoon.png; sourceTree = "<group>"; };
+		E755FF741FA9429400D8AD7C /* appleButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appleButton.png; sourceTree = "<group>"; };
+		E755FF751FA9429400D8AD7C /* spotifyButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotifyButton.png; sourceTree = "<group>"; };
+		E77ADA161FFA9208009F306D /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		E787BBA21FA788B800A55A1B /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 		E787BBA41FA78C0600A55A1B /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		E787BBA81FA7B5B800A55A1B /* SMKTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMKTransitionAnimator.swift; sourceTree = "<group>"; };
@@ -111,8 +113,8 @@
 			isa = PBXGroup;
 			children = (
 				E7EB2AC31FCCC8F40068EC35 /* songs.txt */,
-				E755FF741FA9429400D8AD7C /* appleButoon.png */,
-				E755FF751FA9429400D8AD7C /* spotifyButoon.png */,
+				E755FF741FA9429400D8AD7C /* appleButton.png */,
+				E755FF751FA9429400D8AD7C /* spotifyButton.png */,
 				E787BBAF1FA8833A00A55A1B /* BACK.png */,
 				E78E6E441FA8CF0400AD4C08 /* logofull.png */,
 				E7D059CF1F3B475800BE0D19 /* down.png */,
@@ -131,6 +133,7 @@
 				E7D059BF1F3B44DE00BE0D19 /* ViewController.swift */,
 				E73E75E81F65F69C0068896D /* SMKTransitionViewController.swift */,
 				E708658A1F3CEECC0014FB95 /* HistoryViewController.swift */,
+				E77ADA161FFA9208009F306D /* SongViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -284,7 +287,7 @@
 				E7EB2AC41FCCC8F40068EC35 /* songs.txt in Resources */,
 				E7D059D41F3B475800BE0D19 /* up.png in Resources */,
 				E787BBA31FA788B800A55A1B /* line.png in Resources */,
-				E755FF761FA9429400D8AD7C /* appleButoon.png in Resources */,
+				E755FF761FA9429400D8AD7C /* appleButton.png in Resources */,
 				E78E6E451FA8CF0400AD4C08 /* logofull.png in Resources */,
 				E7D059C81F3B44DE00BE0D19 /* LaunchScreen.storyboard in Resources */,
 				E74C25431F44801C00BD86C7 /* StorefrontCountries.plist in Resources */,
@@ -294,7 +297,7 @@
 				E7D059C31F3B44DE00BE0D19 /* Main.storyboard in Resources */,
 				E70865891F3CE81B0014FB95 /* set.png in Resources */,
 				E7D059D21F3B475800BE0D19 /* down.png in Resources */,
-				E755FF771FA9429400D8AD7C /* spotifyButoon.png in Resources */,
+				E755FF771FA9429400D8AD7C /* spotifyButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,6 +323,7 @@
 				E70E7FC01F40C0FF0056C3D2 /* SpotifySearch.swift in Sources */,
 				E7ED2C1D1F43203C004B93E5 /* SMKSongTransfer.swift in Sources */,
 				E71A5DB81F4384B00049E299 /* MyUtils.swift in Sources */,
+				E77ADA171FFA9208009F306D /* SongViewController.swift in Sources */,
 				E7A2018E1F3F709500C95FC9 /* SMKLoadAnimator.swift in Sources */,
 				E708658F1F3CF3B50014FB95 /* HistoryViewCollectionCell.swift in Sources */,
 			);

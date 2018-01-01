@@ -9,70 +9,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533842696.759592"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "search(info:tokenInfo:repeatCounter:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static ShareSongv2_0.SpotifySearch.search(info: Swift.Dictionary&lt;Swift.String, Any&gt;, tokenInfo: Swift.Dictionary&lt;Swift.String, Any&gt;, repeatCounter: Swift.Int, completion: (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/Services/SpotifySearch.swift"
-                  timestampString = "536514783.110614"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "4629">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static ShareSongv2_0.SpotifySearch.search(info: Swift.Dictionary&lt;Swift.String, Any&gt;, tokenInfo: Swift.Dictionary&lt;Swift.String, Any&gt;, repeatCounter: Swift.Int, completion: (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/Services/SpotifySearch.swift"
-                  timestampString = "536514783.114327"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "80">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533842696.760053"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "search(info:tokenInfo:repeatCounter:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "ShareSongv2.0/tets.swift"
             timestampString = "533843745.309696"
             startingColumnNumber = "9223372036854775807"
@@ -90,12 +26,12 @@
                   moduleName = "ShareSongv2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/tets.swift"
-                  timestampString = "536514783.136919"
+                  timestampString = "536522003.57602"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
                   endingLineNumber = "49"
-                  offsetFromSymbolStart = "324">
+                  offsetFromSymbolStart = "352">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -105,78 +41,14 @@
                   moduleName = "ShareSongv2.0"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/tets.swift"
-                  timestampString = "536514783.139581"
+                  timestampString = "536522003.578074"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
                   endingLineNumber = "49"
-                  offsetFromSymbolStart = "448">
+                  offsetFromSymbolStart = "400">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533842696.760396"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "search(info:tokenInfo:repeatCounter:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533842696.760685"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "search(info:tokenInfo:repeatCounter:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533842696.761019"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "search(info:tokenInfo:repeatCounter:completion:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533842696.761529"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "search(info:tokenInfo:repeatCounter:completion:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
