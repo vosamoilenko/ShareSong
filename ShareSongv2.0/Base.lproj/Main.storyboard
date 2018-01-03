@@ -104,14 +104,14 @@
                             <constraint firstAttribute="trailing" secondItem="i9v-nM-ZMN" secondAttribute="trailing" constant="87" id="syJ-NZ-IIR"/>
                             <constraint firstAttribute="trailing" secondItem="sbD-iX-7pX" secondAttribute="trailing" id="tUs-bF-DJN"/>
                             <constraint firstAttribute="trailing" secondItem="n7G-eu-1EF" secondAttribute="trailing" id="u4A-gS-3Cx"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sbD-iX-7pX" secondAttribute="bottom" id="v3n-eM-Uc0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sbD-iX-7pX" secondAttribute="bottom" id="xOS-oj-7Fa"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="n7G-eu-1EF" secondAttribute="bottom" id="zur-9v-McR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="backgroundImageView" destination="n7G-eu-1EF" id="P1g-YK-DZ0"/>
                         <outlet property="blurView" destination="sbD-iX-7pX" id="TLw-NJ-llj"/>
-                        <outlet property="blurViewBottomConstrint" destination="v3n-eM-Uc0" id="i1S-ja-Fs4"/>
+                        <outlet property="blurViewBottomConstrint" destination="xOS-oj-7Fa" id="2IL-Vz-mNX"/>
                         <outlet property="bottomConstraint" destination="X49-Wh-mZE" id="Cu0-wY-jqt"/>
                         <outlet property="decoratorLine" destination="Gby-IY-AJn" id="Awk-Tp-Vih"/>
                         <outlet property="logo" destination="7oZ-wW-qSb" id="pms-iX-FqR"/>
@@ -126,61 +126,6 @@
                 <swipeGestureRecognizer direction="down" id="b3A-uU-4j2"/>
             </objects>
             <point key="canvasLocation" x="135" y="138.38028169014083"/>
-        </scene>
-        <!--History Collection View Controller-->
-        <scene sceneID="b5F-Me-2cI">
-            <objects>
-                <collectionViewController restorationIdentifier="HistoryCollectionViewController" storyboardIdentifier="HistoryCollectionViewController" id="IiT-rQ-2n9" customClass="HistoryCollectionViewController" customModule="ShareSongv2_0" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="IZ1-JT-xSq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VCC-AI-Xdf">
-                            <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="historyCollectionViewCell" id="kDe-1p-GHj" customClass="HistoryViewCollectionCell" customModule="ShareSongv2_0" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </view>
-                                <connections>
-                                    <segue destination="gf5-BT-ay2" kind="showDetail" id="00g-TV-BD4"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="IiT-rQ-2n9" id="GkK-VS-8Th"/>
-                            <outlet property="delegate" destination="IiT-rQ-2n9" id="sIh-At-jZU"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ARp-0J-m0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1073" y="138"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="C2b-5G-Rpf">
-            <objects>
-                <viewController id="gf5-BT-ay2" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MTD-MW-b3N"/>
-                        <viewControllerLayoutGuide type="bottom" id="2gU-m8-yzW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="U35-mC-Kon">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xjD-2G-ACp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2057" y="137"/>
         </scene>
     </scenes>
     <resources>

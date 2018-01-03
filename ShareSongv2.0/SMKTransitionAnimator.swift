@@ -47,7 +47,7 @@ class SMKTransitionAnimatorBack: NSObject ,UIViewControllerAnimatedTransitioning
     }
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
-        guard let fromViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as? HistoryCollectionViewController else {
+        guard let fromViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as? SongCollectionViewController else {
             fatalError()
         }
         guard let toViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as? ViewController else {

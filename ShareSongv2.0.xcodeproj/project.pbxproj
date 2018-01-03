@@ -27,6 +27,7 @@
 		E787BBB01FA8833A00A55A1B /* BACK.png in Resources */ = {isa = PBXBuildFile; fileRef = E787BBAF1FA8833A00A55A1B /* BACK.png */; };
 		E787BBD71FA8BBF900A55A1B /* ShareSong.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E787BBD51FA8BBF900A55A1B /* ShareSong.xcdatamodeld */; };
 		E78E6E451FA8CF0400AD4C08 /* logofull.png in Resources */ = {isa = PBXBuildFile; fileRef = E78E6E441FA8CF0400AD4C08 /* logofull.png */; };
+		E78E8A1D1FFD152E0029000F /* SongCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E8A1C1FFD152E0029000F /* SongCollectionViewController.swift */; };
 		E7A201851F3F1DEF00C95FC9 /* SMKSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A201841F3F1DEF00C95FC9 /* SMKSong.swift */; };
 		E7A2018E1F3F709500C95FC9 /* SMKLoadAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A2018D1F3F709500C95FC9 /* SMKLoadAnimator.swift */; };
 		E7D059BE1F3B44DE00BE0D19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D059BD1F3B44DE00BE0D19 /* AppDelegate.swift */; };
@@ -64,6 +65,7 @@
 		E787BBAF1FA8833A00A55A1B /* BACK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BACK.png; sourceTree = "<group>"; };
 		E787BBD61FA8BBF900A55A1B /* ShareSong.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShareSong.xcdatamodel; sourceTree = "<group>"; };
 		E78E6E441FA8CF0400AD4C08 /* logofull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logofull.png; sourceTree = "<group>"; };
+		E78E8A1C1FFD152E0029000F /* SongCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCollectionViewController.swift; sourceTree = "<group>"; };
 		E7A201841F3F1DEF00C95FC9 /* SMKSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSong.swift; sourceTree = "<group>"; };
 		E7A2018D1F3F709500C95FC9 /* SMKLoadAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKLoadAnimator.swift; sourceTree = "<group>"; };
 		E7D059BA1F3B44DE00BE0D19 /* ShareSongv2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareSongv2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 				E7D059BF1F3B44DE00BE0D19 /* ViewController.swift */,
 				E73E75E81F65F69C0068896D /* SMKTransitionViewController.swift */,
 				E708658A1F3CEECC0014FB95 /* HistoryViewController.swift */,
+				E78E8A1C1FFD152E0029000F /* SongCollectionViewController.swift */,
 				E77ADA161FFA9208009F306D /* SongViewController.swift */,
 			);
 			name = ViewController;
@@ -326,6 +329,7 @@
 				E7D059BE1F3B44DE00BE0D19 /* AppDelegate.swift in Sources */,
 				E70E7FC01F40C0FF0056C3D2 /* SpotifySearch.swift in Sources */,
 				E7ED2C1D1F43203C004B93E5 /* SMKSongTransfer.swift in Sources */,
+				E78E8A1D1FFD152E0029000F /* SongCollectionViewController.swift in Sources */,
 				E71A5DB81F4384B00049E299 /* MyUtils.swift in Sources */,
 				E77ADA171FFA9208009F306D /* SongViewController.swift in Sources */,
 				E7A2018E1F3F709500C95FC9 /* SMKLoadAnimator.swift in Sources */,
@@ -468,7 +472,7 @@
 				INFOPLIST_FILE = ShareSongv2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = SMK.ShareSong;
+				PRODUCT_BUNDLE_IDENTIFIER = SMK.ShareASong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -483,7 +487,7 @@
 				INFOPLIST_FILE = ShareSongv2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = SMK.ShareSong;
+				PRODUCT_BUNDLE_IDENTIFIER = SMK.ShareASong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;

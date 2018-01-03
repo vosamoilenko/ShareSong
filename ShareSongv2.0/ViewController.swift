@@ -45,6 +45,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.constrainValueBlurView = self.blurViewBottomConstrint.constant
         
         self.backgroundImageView.image = getBackgroundImage()
+        self.backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+        self.backgroundImageView.bottomAnchor.constraint(equalTo: self.view
+            .bottomAnchor, constant: 0.0).isActive = true
     }
     override func viewDidAppear(_ animated: Bool) {
         self.startLogoAnimation()
@@ -88,7 +91,7 @@ extension ViewController : UIViewControllerTransitioningDelegate {
     }
     @objc func goToHistoryViewController() {
      
-        let viewController = HistoryCollectionViewController.init(collectionViewLayout: UICollectionViewFlowLayout.init())
+        let viewController = SongCollectionViewController.init(collectionViewLayout: UICollectionViewFlowLayout.init())
 
         viewController.transitioningDelegate = self
         viewController.modalPresentationStyle = .custom
@@ -187,7 +190,9 @@ extension ViewController {
         self.decoratorLine.layer.opacity = 0.6
         self.decoratorLine.layer.cornerRadius = 4
 
-        self.blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        self.blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.blurView.translatesAutoresizingMaskIntoConstraints = false
+        self.blurView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
     func configureTextField() {
         self.textField.delegate = self

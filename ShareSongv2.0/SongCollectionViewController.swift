@@ -1,27 +1,27 @@
 //
-//  HistoryViewController.swift
+//  SongCollectionViewController.swift
 //  ShareSongv2.0
 //
-//  Created by Vo1 on 10/08/2017.
-//  Copyright © 2017 Samoilenko Volodymyr. All rights reserved.
+//  Created by Vo1 on 03.01.18.
+//  Copyright © 2018 Samoilenko Volodymyr. All rights reserved.
 //
 
 import Foundation
 import UIKit
 
-class HistoryCollectionViewController : UICollectionViewController, UICollectionViewDelegateFlowLayout {
-
+class SongCollectionViewController: UICollectionViewController {
+    
     var dissmissButton: UIButton?
     var parentVC: ViewController?
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureCollectionView()
         configureUI()
         configuewSwipeRecognizer()
-
+        constrains()
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if self.saveBackgroundImage() {
@@ -29,14 +29,7 @@ class HistoryCollectionViewController : UICollectionViewController, UICollection
         }
     }
 }
-
-extension HistoryCollectionViewController {
-    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-          return SMKTransitionAnimatorBack()
-    }
-}
-
-extension HistoryCollectionViewController: UIViewControllerTransitioningDelegate {
+extension SongCollectionViewController: UIViewControllerTransitioningDelegate {
     @objc func dissmiss() {
         self.transitioningDelegate = self
         self.modalPresentationStyle = .custom
@@ -49,7 +42,7 @@ extension HistoryCollectionViewController: UIViewControllerTransitioningDelegate
         layer.render(in: context)
         guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return .none }
         UIGraphicsEndImageContext()
-
+        
         return image
     }
     func saveBackgroundImage() -> Bool {
@@ -60,16 +53,16 @@ extension HistoryCollectionViewController: UIViewControllerTransitioningDelegate
         let archieveUrl = documentDirectory.appendingPathComponent("backgroundImage")
         return archieveUrl.path
     }
-
+    
 }
-extension HistoryCollectionViewController {
 
+extension SongCollectionViewController {
     func configureCollectionView() {
         let collectionView = UICollectionView(frame: self.view.bounds, collectionViewLayout: configureFlowLayout())
         collectionView.register(HistoryViewCollectionCell.self, forCellWithReuseIdentifier: String(describing: HistoryViewCollectionCell.self))
         collectionView.delegate = self
         collectionView.dataSource = self
-
+        
         self.collectionView = collectionView
     }
     func configureFlowLayout() -> UICollectionViewFlowLayout {
@@ -91,35 +84,10 @@ extension HistoryCollectionViewController {
     }
     func configureDissmissButton() {
         self.dissmissButton = .init()
-        self.dissmissButton?.addTarget(self, action:#selector(HistoryCollectionViewController.dissmiss) , for: .touchUpInside)
+        self.dissmissButton?.addTarget(self, action:#selector(SongCollectionViewController.dissmiss) , for: .touchUpInside)
         self.dissmissButton?.setImage(UIImage.init(named: "down"), for: .normal)
         self.view.addSubview(self.dissmissButton!)
-        setConstrinsToDissmissButton()
     }
-    func setConstrinsToDissmissButton() {
-        
-        self.collectionView?.translatesAutoresizingMaskIntoConstraints = false
-        //        self.dissmissButton?.translatesAutoresizingMaskIntoConstraints = false
-        self.collectionView?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        self.collectionView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
-        self.collectionView?.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        self.collectionView?.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-
-
-//        self.dissmissButton?.imageView?.translatesAutoresizingMaskIntoConstraints = false
-//
-//
-//        self.dissmissButton?.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
-//        self.dissmissButton?.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 15).isActive = true
-//        self.dissmissButton?.widthAnchor.constraint(equalToConstant: 44).isActive = true
-//
-//
-//        self.dissmissButton?.imageView?.bottomAnchor.constraint(equalTo: self.dissmissButton!.bottomAnchor, constant: -5).isActive = true
-////
-//        self.dissmissButton?.imageView?.heightAnchor.constraint(equalToConstant: 22).isActive = true
-//        self.dissmissButton?.imageView?.widthAnchor.constraint(equalToConstant: 44).isActive = true
-    }
-
     func configuewSwipeRecognizer() {
         let x = UISwipeGestureRecognizer.init()
         x.direction = .down
@@ -127,7 +95,33 @@ extension HistoryCollectionViewController {
         self.view.addGestureRecognizer(x)
     }
 }
-extension HistoryCollectionViewController {
+
+extension SongCollectionViewController {
+    func constrains() {
+        self.dissmissButton?.translatesAutoresizingMaskIntoConstraints = false
+        self.dissmissButton?.imageView?.translatesAutoresizingMaskIntoConstraints = false
+        self.collectionView?.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        self.dissmissButton?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        self.dissmissButton?.bottomAnchor.constraint(equalTo: self.view.topAnchor, constant: 60).isActive = true
+        self.dissmissButton?.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        self.dissmissButton?.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        
+        guard let bottomAnch = self.dissmissButton?.bottomAnchor else {fatalError("No anchor")}
+        self.dissmissButton?.imageView?.bottomAnchor.constraint(equalTo: bottomAnch).isActive = true
+        self.dissmissButton?.imageView?.widthAnchor.constraint(equalToConstant: 44).isActive = true
+        self.dissmissButton?.imageView?.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 30).isActive = true
+        
+    }
+}
+
+extension SongCollectionViewController {
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return SMKTransitionAnimatorBack()
+    }
+}
+extension SongCollectionViewController {
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -135,24 +129,25 @@ extension HistoryCollectionViewController {
         return SMKSongStore.sharedStore.count()
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: HistoryViewCollectionCell.self), for: indexPath) as! HistoryViewCollectionCell
         guard let image = SMKSongStore.sharedStore.songAt(index: indexPath.item).image else {
             fatalError("no song for index")
         }
         cell.fillData(image: image)
-
-
+        
+        
         return cell
     }
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let song = SMKSongStore.sharedStore.songAt(index: indexPath.item)
-
+        
         let vc = SongViewController()
         vc.set(song)
         vc.backgroundImageView.image = captureScreen()
         present(vc,animated: true,completion: nil)
     }
 }
+
 
 
