@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E70865891F3CE81B0014FB95 /* set.png in Resources */ = {isa = PBXBuildFile; fileRef = E70865881F3CE81B0014FB95 /* set.png */; };
-		E708658B1F3CEECC0014FB95 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E708658A1F3CEECC0014FB95 /* HistoryViewController.swift */; };
 		E708658F1F3CF3B50014FB95 /* HistoryViewCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E708658E1F3CF3B50014FB95 /* HistoryViewCollectionCell.swift */; };
 		E70E7FC01F40C0FF0056C3D2 /* SpotifySearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70E7FBF1F40C0FF0056C3D2 /* SpotifySearch.swift */; };
 		E71328951F66F22B0032D020 /* tets.swift in Sources */ = {isa = PBXBuildFile; fileRef = E71328941F66F22B0032D020 /* tets.swift */; };
@@ -24,10 +23,11 @@
 		E787BBA31FA788B800A55A1B /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = E787BBA21FA788B800A55A1B /* line.png */; };
 		E787BBA51FA78C0700A55A1B /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = E787BBA41FA78C0600A55A1B /* search.png */; };
 		E787BBA91FA7B5B800A55A1B /* SMKTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E787BBA81FA7B5B800A55A1B /* SMKTransitionAnimator.swift */; };
-		E787BBB01FA8833A00A55A1B /* BACK.png in Resources */ = {isa = PBXBuildFile; fileRef = E787BBAF1FA8833A00A55A1B /* BACK.png */; };
 		E787BBD71FA8BBF900A55A1B /* ShareSong.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E787BBD51FA8BBF900A55A1B /* ShareSong.xcdatamodeld */; };
 		E78E6E451FA8CF0400AD4C08 /* logofull.png in Resources */ = {isa = PBXBuildFile; fileRef = E78E6E441FA8CF0400AD4C08 /* logofull.png */; };
 		E78E8A1D1FFD152E0029000F /* SongCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E8A1C1FFD152E0029000F /* SongCollectionViewController.swift */; };
+		E78E8A211FFD25FA0029000F /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = E78E8A201FFD25F90029000F /* back.png */; };
+		E799009D1FFD52C400A1BB6A /* 111.png in Resources */ = {isa = PBXBuildFile; fileRef = E799009C1FFD52C300A1BB6A /* 111.png */; };
 		E7A201851F3F1DEF00C95FC9 /* SMKSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A201841F3F1DEF00C95FC9 /* SMKSong.swift */; };
 		E7A2018E1F3F709500C95FC9 /* SMKLoadAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A2018D1F3F709500C95FC9 /* SMKLoadAnimator.swift */; };
 		E7D059BE1F3B44DE00BE0D19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D059BD1F3B44DE00BE0D19 /* AppDelegate.swift */; };
@@ -46,7 +46,6 @@
 
 /* Begin PBXFileReference section */
 		E70865881F3CE81B0014FB95 /* set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = set.png; sourceTree = "<group>"; };
-		E708658A1F3CEECC0014FB95 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		E708658E1F3CF3B50014FB95 /* HistoryViewCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewCollectionCell.swift; sourceTree = "<group>"; };
 		E70E7FBF1F40C0FF0056C3D2 /* SpotifySearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpotifySearch.swift; sourceTree = "<group>"; };
 		E71328941F66F22B0032D020 /* tets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tets.swift; path = ShareSongv2.0/tets.swift; sourceTree = "<group>"; };
@@ -62,10 +61,11 @@
 		E787BBA21FA788B800A55A1B /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 		E787BBA41FA78C0600A55A1B /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		E787BBA81FA7B5B800A55A1B /* SMKTransitionAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMKTransitionAnimator.swift; sourceTree = "<group>"; };
-		E787BBAF1FA8833A00A55A1B /* BACK.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BACK.png; sourceTree = "<group>"; };
 		E787BBD61FA8BBF900A55A1B /* ShareSong.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShareSong.xcdatamodel; sourceTree = "<group>"; };
 		E78E6E441FA8CF0400AD4C08 /* logofull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logofull.png; sourceTree = "<group>"; };
 		E78E8A1C1FFD152E0029000F /* SongCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCollectionViewController.swift; sourceTree = "<group>"; };
+		E78E8A201FFD25F90029000F /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = ../../../../Desktop/back.png; sourceTree = "<group>"; };
+		E799009C1FFD52C300A1BB6A /* 111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 111.png; path = ../../../../Desktop/111.png; sourceTree = "<group>"; };
 		E7A201841F3F1DEF00C95FC9 /* SMKSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSong.swift; sourceTree = "<group>"; };
 		E7A2018D1F3F709500C95FC9 /* SMKLoadAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKLoadAnimator.swift; sourceTree = "<group>"; };
 		E7D059BA1F3B44DE00BE0D19 /* ShareSongv2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareSongv2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,10 +116,11 @@
 		E78E6E461FA8CF1600AD4C08 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				E799009C1FFD52C300A1BB6A /* 111.png */,
 				E7EB2AC31FCCC8F40068EC35 /* songs.txt */,
+				E78E8A201FFD25F90029000F /* back.png */,
 				E755FF741FA9429400D8AD7C /* appleButton.png */,
 				E755FF751FA9429400D8AD7C /* spotifyButton.png */,
-				E787BBAF1FA8833A00A55A1B /* BACK.png */,
 				E78E6E441FA8CF0400AD4C08 /* logofull.png */,
 				E7D059CF1F3B475800BE0D19 /* down.png */,
 				E7D059D01F3B475800BE0D19 /* logo.png */,
@@ -136,7 +137,6 @@
 			children = (
 				E7D059BF1F3B44DE00BE0D19 /* ViewController.swift */,
 				E73E75E81F65F69C0068896D /* SMKTransitionViewController.swift */,
-				E708658A1F3CEECC0014FB95 /* HistoryViewController.swift */,
 				E78E8A1C1FFD152E0029000F /* SongCollectionViewController.swift */,
 				E77ADA161FFA9208009F306D /* SongViewController.swift */,
 			);
@@ -289,7 +289,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E787BBB01FA8833A00A55A1B /* BACK.png in Resources */,
 				E7EB2AC41FCCC8F40068EC35 /* songs.txt in Resources */,
 				E7D059D41F3B475800BE0D19 /* up.png in Resources */,
 				E787BBA31FA788B800A55A1B /* line.png in Resources */,
@@ -301,7 +300,9 @@
 				E7D059C51F3B44DE00BE0D19 /* Assets.xcassets in Resources */,
 				E787BBA51FA78C0700A55A1B /* search.png in Resources */,
 				E7D059C31F3B44DE00BE0D19 /* Main.storyboard in Resources */,
+				E78E8A211FFD25FA0029000F /* back.png in Resources */,
 				E70865891F3CE81B0014FB95 /* set.png in Resources */,
+				E799009D1FFD52C400A1BB6A /* 111.png in Resources */,
 				E7D059D21F3B475800BE0D19 /* down.png in Resources */,
 				E755FF771FA9429400D8AD7C /* spotifyButton.png in Resources */,
 			);
@@ -316,7 +317,6 @@
 			files = (
 				E73E75ED1F65F8BB0068896D /* SMKSongStore.swift in Sources */,
 				E71328951F66F22B0032D020 /* tets.swift in Sources */,
-				E708658B1F3CEECC0014FB95 /* HistoryViewController.swift in Sources */,
 				E7ED2C1F1F43275B004B93E5 /* SMKFilter.swift in Sources */,
 				E73E75E91F65F69C0068896D /* SMKTransitionViewController.swift in Sources */,
 				E7A201851F3F1DEF00C95FC9 /* SMKSong.swift in Sources */,

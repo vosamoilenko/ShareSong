@@ -12,11 +12,17 @@ import UIKit
 class SMKTransitionViewController : UIViewController, UIViewControllerTransitioningDelegate {
     //MARK: - Properties -
     var logo: UIImageView?
+    var imageView: UIImageView?
     //MARK: - Life cycle -
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.imageView = UIImageView.init(frame: .zero)
+        self.imageView?.image = UIImage.init(named: "111")
+        self.view.addSubview(self.imageView!)
+        
+        
         self.logo = UIImageView.init(image: UIImage.init(named: "logo.png"))
-        self.logo?.translatesAutoresizingMaskIntoConstraints = false
+        
         if let logo = self.logo {
             self.view.addSubview(logo)
             setConstrains()
@@ -35,6 +41,13 @@ class SMKTransitionViewController : UIViewController, UIViewControllerTransition
         guard let logo = self.logo else {
             fatalError("func setConstrains()")
         }
+        self.logo?.translatesAutoresizingMaskIntoConstraints = false
+        self.imageView?.translatesAutoresizingMaskIntoConstraints = false
+        self.imageView?.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        self.imageView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
+        self.imageView?.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
+        self.imageView?.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
+        
         logo.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         logo.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
         logo.widthAnchor.constraint(equalToConstant: 75).isActive = true

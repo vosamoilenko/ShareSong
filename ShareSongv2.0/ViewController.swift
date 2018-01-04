@@ -126,7 +126,7 @@ extension ViewController : UIViewControllerTransitioningDelegate {
         if let img = NSKeyedUnarchiver.unarchiveObject(withFile: archieveUrl.path) as? UIImage {
             return img
         }
-        return UIImage.init()
+        return nil
     }
     
 }

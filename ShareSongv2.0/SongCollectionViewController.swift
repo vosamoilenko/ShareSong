@@ -20,6 +20,7 @@ class SongCollectionViewController: UICollectionViewController {
         configureUI()
         configuewSwipeRecognizer()
         constrains()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -111,7 +112,7 @@ extension SongCollectionViewController {
         guard let bottomAnch = self.dissmissButton?.bottomAnchor else {fatalError("No anchor")}
         self.dissmissButton?.imageView?.bottomAnchor.constraint(equalTo: bottomAnch).isActive = true
         self.dissmissButton?.imageView?.widthAnchor.constraint(equalToConstant: 44).isActive = true
-        self.dissmissButton?.imageView?.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 30).isActive = true
+        self.dissmissButton?.imageView?.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 40).isActive = true
         
     }
 }

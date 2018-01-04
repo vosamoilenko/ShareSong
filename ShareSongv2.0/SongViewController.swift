@@ -190,7 +190,7 @@ class SongViewController : UIViewController {
     }
     @objc fileprivate func presentShareAlertControllerBy(sender: UIButton) {
         
-        let alertController = UIAlertController.init(title: "Share", message: "", preferredStyle: .actionSheet)
+        let alertController = UIAlertController.init(title: "Share", message: "\(self.titleLabel.text?.description ?? "")", preferredStyle: .actionSheet)
         
         var copyAction: UIAlertAction?
         var redirectAction: UIAlertAction?
@@ -203,7 +203,7 @@ class SongViewController : UIViewController {
                 self.dismiss(animated: true, completion: nil)
             }
 
-            redirectAction = UIAlertAction.init(title: "Open in Apple Music", style: .destructive, handler: { (openInApp) in
+            redirectAction = UIAlertAction.init(title: "Open in Apple Music", style: .default, handler: { (openInApp) in
                 let url = URL.init(string:(self.song?.appleUri)!)
                 UIApplication.shared.open(url!, options: [:], completionHandler: { (b) in
                     self.dismiss(animated: true, completion: nil)
@@ -214,7 +214,7 @@ class SongViewController : UIViewController {
                 UIPasteboard.general.string = self.song?.spotifyLink
                 self.dismiss(animated: true, completion: nil)
             }
-            redirectAction = UIAlertAction.init(title: "Open in Spotify", style: .destructive, handler: { (openInApp) in
+            redirectAction = UIAlertAction.init(title: "Open in Spotify", style: .default, handler: { (openInApp) in
                 let url = URL.init(string:(self.song?.spotifyUri)!)
                 UIApplication.shared.open(url!, options: [:], completionHandler: { (b) in
                 self.dismiss(animated: true, completion: nil)
