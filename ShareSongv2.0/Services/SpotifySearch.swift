@@ -57,7 +57,6 @@ class SpotifySearch  {
                 fatalError("session.dataTask")
             }
             
-            print(json)
             
             if isNeedToUpdateToken(tokenInfo: json) {
                 updateToken(response: json, completion: { (token) in

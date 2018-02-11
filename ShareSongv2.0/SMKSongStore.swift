@@ -38,7 +38,6 @@ class SMKSongStore {
         return store.count
     }
     func isMember(link: String) -> Bool {
-        // FIX: rewrite checking by id or name
         for song in store {
             
             guard let spotifyLink = song.spotifyLink, let appleLink = song.appleLink else {

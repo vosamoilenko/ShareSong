@@ -9,61 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533521565.981899"
+            filePath = "ShareSongv2.0/HistoryViewController.swift"
+            timestampString = "540044390.969159"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "50"
-            endingLineNumber = "50"
-            landmarkName = "search(info:tokenInfo:repeatCounter:completion:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "static ShareSongv2_0.SpotifySearch.search(info: Swift.Dictionary&lt;Swift.String, Any&gt;, tokenInfo: Swift.Dictionary&lt;Swift.String, Any&gt;, repeatCounter: Swift.Int, completion: (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/Services/SpotifySearch.swift"
-                  timestampString = "536593305.049321"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "50"
-                  endingLineNumber = "50"
-                  offsetFromSymbolStart = "4629">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static ShareSongv2_0.SpotifySearch.search(info: Swift.Dictionary&lt;Swift.String, Any&gt;, tokenInfo: Swift.Dictionary&lt;Swift.String, Any&gt;, repeatCounter: Swift.Int, completion: (Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;, Swift.Bool, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "ShareSongv2.0"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vladimir/Developer/Swift/ShareSong/ShareSongv2.0/Services/SpotifySearch.swift"
-                  timestampString = "536593305.051987"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "80">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533521565.982596"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "search(info:tokenInfo:repeatCounter:completion:)"
+            startingLineNumber = "329"
+            endingLineNumber = "329"
+            landmarkName = "hideOverlayView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533521565.984137"
+            filePath = "ShareSongv2.0/HistoryViewController.swift"
+            timestampString = "540044390.970584"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "search(info:tokenInfo:repeatCounter:completion:)"
+            startingLineNumber = "320"
+            endingLineNumber = "320"
+            landmarkName = "showOverlayView()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533521565.984648"
+            filePath = "ShareSongv2.0/HistoryViewController.swift"
+            timestampString = "540044390.9719419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
-            landmarkName = "search(info:tokenInfo:repeatCounter:completion:)"
+            startingLineNumber = "337"
+            endingLineNumber = "337"
+            landmarkName = "showOrHideImageViewButtonsLabels(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533521565.985492"
+            filePath = "ShareSongv2.0/HistoryViewController.swift"
+            timestampString = "540044390.9729429"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
-            landmarkName = "search(info:tokenInfo:repeatCounter:completion:)"
+            startingLineNumber = "347"
+            endingLineNumber = "347"
+            landmarkName = "setSongInfo(title:artist:image:spotifyLink:appleLink:spotifyUri:appleUri:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,13 +73,93 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShareSongv2.0/Services/SpotifySearch.swift"
-            timestampString = "533521565.988906"
+            filePath = "ShareSongv2.0/HistoryViewController.swift"
+            timestampString = "540044390.973688"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "search(info:tokenInfo:repeatCounter:completion:)"
+            startingLineNumber = "264"
+            endingLineNumber = "264"
+            landmarkName = "configureAppleLinkButton()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShareSongv2.0/HistoryViewController.swift"
+            timestampString = "540044390.974367"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "256"
+            endingLineNumber = "256"
+            landmarkName = "configureSpotifyLinkButton()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShareSongv2.0/HistoryViewController.swift"
+            timestampString = "540044390.975258"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "configureArtistLabel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShareSongv2.0/HistoryViewController.swift"
+            timestampString = "540044390.976107"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "237"
+            endingLineNumber = "237"
+            landmarkName = "configureTitleLabel()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShareSongv2.0/HistoryViewController.swift"
+            timestampString = "540044390.977146"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
+            landmarkName = "configureImageView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShareSongv2.0/HistoryViewController.swift"
+            timestampString = "540044390.978166"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

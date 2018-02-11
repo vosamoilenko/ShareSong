@@ -32,12 +32,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        getSongs()
-//        oauth()
-        
-        
-        
-        
         prepareUI()
         swipeRecognizerConfiguration()
         configureObservers()
@@ -91,7 +85,7 @@ extension ViewController : UIViewControllerTransitioningDelegate {
         viewController.modalPresentationStyle = .custom
         viewController.parentVC = self
         self.present(viewController, animated: true) {
-            SMKSongStore.sharedStore.saveChanges()
+            _ = SMKSongStore.sharedStore.saveChanges()
         }
     }
     func changeYOfConstrain() {

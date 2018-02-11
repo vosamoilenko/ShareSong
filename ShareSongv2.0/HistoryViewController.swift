@@ -41,7 +41,6 @@ class HistoryCollectionViewController : UICollectionViewController, UICollection
             self.parentVC?.backgroundImageView.image = self.captureScreen()
         }
     }
-    
 }
 
 extension HistoryCollectionViewController {
@@ -63,7 +62,6 @@ extension HistoryCollectionViewController: UIViewControllerTransitioningDelegate
         layer.render(in: context)
         guard let image = UIGraphicsGetImageFromCurrentImageContext() else { return .none }
         UIGraphicsEndImageContext()
-        
         return image
     }
     func saveBackgroundImage() -> Bool {
@@ -74,7 +72,6 @@ extension HistoryCollectionViewController: UIViewControllerTransitioningDelegate
         let archieveUrl = documentDirectory.appendingPathComponent("backgroundImage")
         return archieveUrl.path
     }
-
 }
 extension HistoryCollectionViewController {
     func configureOverlayAfterDidSelectItem() {
@@ -355,14 +352,14 @@ extension HistoryCollectionViewController {
         self.spotifyUri = spotifyUri
         self.appleUri = appleUri
     }
-    func clearSongInfo() {
-        self.artistLabel?.text = ""
-        self.titleLabel?.text = ""
-        self.imageView?.image = nil
-        self.appleMusicLink = ""
-        self.spotifyLink = ""
-        self.spotifyUri = ""
-        self.appleUri = ""
-    }
+//    func clearSongInfo() {
+//        self.artistLabel?.text = ""
+//        self.titleLabel?.text = ""
+//        self.imageView?.image = nil
+//        self.appleMusicLink = ""
+//        self.spotifyLink = ""
+//        self.spotifyUri = ""
+//        self.appleUri = ""
+//    }
     
 }

@@ -29,6 +29,16 @@
       language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E7614C47203067F8009DB7FD"
+               BuildableName = "ShareSongv2.0Tests.xctest"
+               BlueprintName = "ShareSongv2.0Tests"
+               ReferencedContainer = "container:ShareSongv2.0.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
