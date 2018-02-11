@@ -17,7 +17,7 @@ class SMKTransitionViewController : UIViewController, UIViewControllerTransition
     override func viewDidLoad() {
         super.viewDidLoad()
         self.imageView = UIImageView.init(frame: .zero)
-        self.imageView?.image = UIImage.init(named: "111")
+        self.imageView?.image = UIImage.init()
         self.view.addSubview(self.imageView!)
         
         

@@ -26,8 +26,6 @@
 		E787BBD71FA8BBF900A55A1B /* ShareSong.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E787BBD51FA8BBF900A55A1B /* ShareSong.xcdatamodeld */; };
 		E78E6E451FA8CF0400AD4C08 /* logofull.png in Resources */ = {isa = PBXBuildFile; fileRef = E78E6E441FA8CF0400AD4C08 /* logofull.png */; };
 		E78E8A1D1FFD152E0029000F /* SongCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78E8A1C1FFD152E0029000F /* SongCollectionViewController.swift */; };
-		E78E8A211FFD25FA0029000F /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = E78E8A201FFD25F90029000F /* back.png */; };
-		E799009D1FFD52C400A1BB6A /* 111.png in Resources */ = {isa = PBXBuildFile; fileRef = E799009C1FFD52C300A1BB6A /* 111.png */; };
 		E7A201851F3F1DEF00C95FC9 /* SMKSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A201841F3F1DEF00C95FC9 /* SMKSong.swift */; };
 		E7A2018E1F3F709500C95FC9 /* SMKLoadAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A2018D1F3F709500C95FC9 /* SMKLoadAnimator.swift */; };
 		E7D059BE1F3B44DE00BE0D19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D059BD1F3B44DE00BE0D19 /* AppDelegate.swift */; };
@@ -64,8 +62,6 @@
 		E787BBD61FA8BBF900A55A1B /* ShareSong.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ShareSong.xcdatamodel; sourceTree = "<group>"; };
 		E78E6E441FA8CF0400AD4C08 /* logofull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logofull.png; sourceTree = "<group>"; };
 		E78E8A1C1FFD152E0029000F /* SongCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongCollectionViewController.swift; sourceTree = "<group>"; };
-		E78E8A201FFD25F90029000F /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back.png; path = ../../../../Desktop/back.png; sourceTree = "<group>"; };
-		E799009C1FFD52C300A1BB6A /* 111.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 111.png; path = ../../../../Desktop/111.png; sourceTree = "<group>"; };
 		E7A201841F3F1DEF00C95FC9 /* SMKSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKSong.swift; sourceTree = "<group>"; };
 		E7A2018D1F3F709500C95FC9 /* SMKLoadAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMKLoadAnimator.swift; sourceTree = "<group>"; };
 		E7D059BA1F3B44DE00BE0D19 /* ShareSongv2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareSongv2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,9 +112,7 @@
 		E78E6E461FA8CF1600AD4C08 /* res */ = {
 			isa = PBXGroup;
 			children = (
-				E799009C1FFD52C300A1BB6A /* 111.png */,
 				E7EB2AC31FCCC8F40068EC35 /* songs.txt */,
-				E78E8A201FFD25F90029000F /* back.png */,
 				E755FF741FA9429400D8AD7C /* appleButton.png */,
 				E755FF751FA9429400D8AD7C /* spotifyButton.png */,
 				E78E6E441FA8CF0400AD4C08 /* logofull.png */,
@@ -300,9 +294,7 @@
 				E7D059C51F3B44DE00BE0D19 /* Assets.xcassets in Resources */,
 				E787BBA51FA78C0700A55A1B /* search.png in Resources */,
 				E7D059C31F3B44DE00BE0D19 /* Main.storyboard in Resources */,
-				E78E8A211FFD25FA0029000F /* back.png in Resources */,
 				E70865891F3CE81B0014FB95 /* set.png in Resources */,
-				E799009D1FFD52C400A1BB6A /* 111.png in Resources */,
 				E7D059D21F3B475800BE0D19 /* down.png in Resources */,
 				E755FF771FA9429400D8AD7C /* spotifyButton.png in Resources */,
 			);
