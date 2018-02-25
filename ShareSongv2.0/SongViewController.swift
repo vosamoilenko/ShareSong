@@ -69,6 +69,8 @@ extension SongViewController {
         alertController.addAction(configureCancelAction())
         self.present(alertController, animated: true, completion: nil)
     }
+}
+extension SongViewController {
     fileprivate func configureCopyAction(tag: Int) -> UIAlertAction {
         let action = UIAlertAction.init(title: "Copy to clipboard", style: .default) { (copy) in
             UIPasteboard.general.string = tag == 1 ? self.song?.appleLink : self.song?.spotifyLink

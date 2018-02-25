@@ -24,7 +24,6 @@ class SpotifySearch  {
             let title = info["title"] as? String else {
                 fatalError("class func search")
         }
-
         let encodeArtist = artist.clean().lowercased().addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)
         
         let encodeTitle = title.clean().lowercased().addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)

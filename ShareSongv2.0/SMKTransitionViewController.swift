@@ -20,7 +20,6 @@ class SMKTransitionViewController : UIViewController, UIViewControllerTransition
         self.imageView?.image = UIImage.init()
         self.view.addSubview(self.imageView!)
         
-        
         self.logo = UIImageView.init(image: UIImage.init(named: "logo.png"))
         
         if let logo = self.logo {

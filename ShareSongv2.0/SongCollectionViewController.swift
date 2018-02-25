@@ -20,9 +20,7 @@ class SongCollectionViewController: UICollectionViewController {
         configureUI()
         configuewSwipeRecognizer()
         constrains()
-        
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         if self.saveBackgroundImage() {
@@ -54,7 +52,6 @@ extension SongCollectionViewController: UIViewControllerTransitioningDelegate {
         let archieveUrl = documentDirectory.appendingPathComponent("backgroundImage")
         return archieveUrl.path
     }
-    
 }
 
 extension SongCollectionViewController {
@@ -116,7 +113,6 @@ extension SongCollectionViewController {
         
     }
 }
-
 extension SongCollectionViewController {
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return SMKTransitionAnimatorBack()

@@ -18,6 +18,7 @@
 		E74C25431F44801C00BD86C7 /* StorefrontCountries.plist in Resources */ = {isa = PBXBuildFile; fileRef = E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */; };
 		E755FF761FA9429400D8AD7C /* appleButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E755FF741FA9429400D8AD7C /* appleButton.png */; };
 		E755FF771FA9429400D8AD7C /* spotifyButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E755FF751FA9429400D8AD7C /* spotifyButton.png */; };
+		E757CD5220319453001B5690 /* ShareSongv2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E757CD5120319453001B5690 /* ShareSongv2_0Tests.swift */; };
 		E77ADA171FFA9208009F306D /* SongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77ADA161FFA9208009F306D /* SongViewController.swift */; };
 		E77ADA1B1FFAD33F009F306D /* SMKImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77ADA1A1FFAD33F009F306D /* SMKImageColors.swift */; };
 		E787BBA31FA788B800A55A1B /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = E787BBA21FA788B800A55A1B /* line.png */; };
@@ -36,11 +37,46 @@
 		E7D059D21F3B475800BE0D19 /* down.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D059CF1F3B475800BE0D19 /* down.png */; };
 		E7D059D31F3B475800BE0D19 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D059D01F3B475800BE0D19 /* logo.png */; };
 		E7D059D41F3B475800BE0D19 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = E7D059D11F3B475800BE0D19 /* up.png */; };
+		E7D2DDD72042DC260086B705 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7D2DDD62042DC260086B705 /* NotificationCenter.framework */; };
+		E7D2DDDA2042DC260086B705 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7D2DDD92042DC260086B705 /* TodayViewController.swift */; };
+		E7D2DDDD2042DC260086B705 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7D2DDDB2042DC260086B705 /* MainInterface.storyboard */; };
+		E7D2DDE12042DC260086B705 /* Share a Song.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E7D2DDD52042DC260086B705 /* Share a Song.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		E7EB2AC21FCCC8700068EC35 /* VK.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7EB2AC11FCCC8700068EC35 /* VK.swift */; };
 		E7EB2AC41FCCC8F40068EC35 /* songs.txt in Resources */ = {isa = PBXBuildFile; fileRef = E7EB2AC31FCCC8F40068EC35 /* songs.txt */; };
 		E7ED2C1D1F43203C004B93E5 /* SMKSongTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ED2C1C1F43203C004B93E5 /* SMKSongTransfer.swift */; };
 		E7ED2C1F1F43275B004B93E5 /* SMKFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ED2C1E1F43275B004B93E5 /* SMKFilter.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E757CD5420319453001B5690 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7D059B21F3B44DE00BE0D19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7D059B91F3B44DE00BE0D19;
+			remoteInfo = ShareSongv2.0;
+		};
+		E7D2DDDF2042DC260086B705 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E7D059B21F3B44DE00BE0D19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E7D2DDD42042DC250086B705;
+			remoteInfo = "Share a Song";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E7D2DDE52042DC260086B705 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E7D2DDE12042DC260086B705 /* Share a Song.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E70865881F3CE81B0014FB95 /* set.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = set.png; sourceTree = "<group>"; };
@@ -54,6 +90,9 @@
 		E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = StorefrontCountries.plist; sourceTree = "<group>"; };
 		E755FF741FA9429400D8AD7C /* appleButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appleButton.png; sourceTree = "<group>"; };
 		E755FF751FA9429400D8AD7C /* spotifyButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spotifyButton.png; sourceTree = "<group>"; };
+		E757CD4F20319453001B5690 /* ShareSongv2.0Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShareSongv2.0Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E757CD5120319453001B5690 /* ShareSongv2_0Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSongv2_0Tests.swift; sourceTree = "<group>"; };
+		E757CD5320319453001B5690 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E77ADA161FFA9208009F306D /* SongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewController.swift; sourceTree = "<group>"; };
 		E77ADA1A1FFAD33F009F306D /* SMKImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMKImageColors.swift; sourceTree = "<group>"; };
 		E787BBA21FA788B800A55A1B /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
@@ -74,6 +113,11 @@
 		E7D059CF1F3B475800BE0D19 /* down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = down.png; sourceTree = "<group>"; };
 		E7D059D01F3B475800BE0D19 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		E7D059D11F3B475800BE0D19 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
+		E7D2DDD52042DC260086B705 /* Share a Song.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Share a Song.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7D2DDD62042DC260086B705 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		E7D2DDD92042DC260086B705 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		E7D2DDDC2042DC260086B705 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		E7D2DDDE2042DC260086B705 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7EB2AC11FCCC8700068EC35 /* VK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK.swift; sourceTree = "<group>"; };
 		E7EB2AC31FCCC8F40068EC35 /* songs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = songs.txt; sourceTree = "<group>"; };
 		E7EB2AC61FCCE6160068EC35 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -82,10 +126,25 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E757CD4C20319453001B5690 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7D059B71F3B44DE00BE0D19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7D2DDD22042DC250086B705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7D2DDD72042DC260086B705 /* NotificationCenter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,9 +159,19 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
+		E757CD5020319453001B5690 /* ShareSongv2.0Tests */ = {
+			isa = PBXGroup;
+			children = (
+				E757CD5120319453001B5690 /* ShareSongv2_0Tests.swift */,
+				E757CD5320319453001B5690 /* Info.plist */,
+			);
+			path = ShareSongv2.0Tests;
+			sourceTree = "<group>";
+		};
 		E787BBAA1FA7B5BD00A55A1B /* Animator */ = {
 			isa = PBXGroup;
 			children = (
+				E77ADA1A1FFAD33F009F306D /* SMKImageColors.swift */,
 				E7A2018D1F3F709500C95FC9 /* SMKLoadAnimator.swift */,
 				E787BBA81FA7B5B800A55A1B /* SMKTransitionAnimator.swift */,
 			);
@@ -148,7 +217,6 @@
 		E7A2018C1F3F6EA900C95FC9 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				E7ED2C1C1F43203C004B93E5 /* SMKSongTransfer.swift */,
 				E7ED2C1E1F43275B004B93E5 /* SMKFilter.swift */,
 				E7A201841F3F1DEF00C95FC9 /* SMKSong.swift */,
 				E73E75EC1F65F8BB0068896D /* SMKSongStore.swift */,
@@ -159,9 +227,10 @@
 		E7D059B11F3B44DE00BE0D19 = {
 			isa = PBXGroup;
 			children = (
-				E77ADA1A1FFAD33F009F306D /* SMKImageColors.swift */,
 				E71328941F66F22B0032D020 /* tets.swift */,
 				E7D059BC1F3B44DE00BE0D19 /* ShareSongv2.0 */,
+				E757CD5020319453001B5690 /* ShareSongv2.0Tests */,
+				E7D2DDD82042DC260086B705 /* Share a Song */,
 				E7D059BB1F3B44DE00BE0D19 /* Products */,
 				E74C25421F44801C00BD86C7 /* StorefrontCountries.plist */,
 				E78E6E461FA8CF1600AD4C08 /* res */,
@@ -173,6 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				E7D059BA1F3B44DE00BE0D19 /* ShareSongv2.0.app */,
+				E757CD4F20319453001B5690 /* ShareSongv2.0Tests.xctest */,
+				E7D2DDD52042DC260086B705 /* Share a Song.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,6 +268,16 @@
 			path = ShareSongv2.0;
 			sourceTree = "<group>";
 		};
+		E7D2DDD82042DC260086B705 /* Share a Song */ = {
+			isa = PBXGroup;
+			children = (
+				E7D2DDD92042DC260086B705 /* TodayViewController.swift */,
+				E7D2DDDB2042DC260086B705 /* MainInterface.storyboard */,
+				E7D2DDDE2042DC260086B705 /* Info.plist */,
+			);
+			path = "Share a Song";
+			sourceTree = "<group>";
+		};
 		E7EB2AC01FCCC85D0068EC35 /* VK */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				E7EB2AC61FCCE6160068EC35 /* AVFoundation.framework */,
+				E7D2DDD62042DC260086B705 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -218,6 +300,7 @@
 			children = (
 				E73E75E41F65F67B0068896D /* AppleMusicSearch.swift */,
 				E70E7FBF1F40C0FF0056C3D2 /* SpotifySearch.swift */,
+				E7ED2C1C1F43203C004B93E5 /* SMKSongTransfer.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -225,6 +308,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E757CD4E20319453001B5690 /* ShareSongv2.0Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E757CD5620319453001B5690 /* Build configuration list for PBXNativeTarget "ShareSongv2.0Tests" */;
+			buildPhases = (
+				E757CD4B20319453001B5690 /* Sources */,
+				E757CD4C20319453001B5690 /* Frameworks */,
+				E757CD4D20319453001B5690 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E757CD5520319453001B5690 /* PBXTargetDependency */,
+			);
+			name = ShareSongv2.0Tests;
+			productName = ShareSongv2.0Tests;
+			productReference = E757CD4F20319453001B5690 /* ShareSongv2.0Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		E7D059B91F3B44DE00BE0D19 /* ShareSongv2.0 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7D059CC1F3B44DE00BE0D19 /* Build configuration list for PBXNativeTarget "ShareSongv2.0" */;
@@ -232,15 +333,34 @@
 				E7D059B61F3B44DE00BE0D19 /* Sources */,
 				E7D059B71F3B44DE00BE0D19 /* Frameworks */,
 				E7D059B81F3B44DE00BE0D19 /* Resources */,
+				E7D2DDE52042DC260086B705 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E7D2DDE02042DC260086B705 /* PBXTargetDependency */,
 			);
 			name = ShareSongv2.0;
 			productName = ShareSongv2.0;
 			productReference = E7D059BA1F3B44DE00BE0D19 /* ShareSongv2.0.app */;
 			productType = "com.apple.product-type.application";
+		};
+		E7D2DDD42042DC250086B705 /* Share a Song */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7D2DDE42042DC260086B705 /* Build configuration list for PBXNativeTarget "Share a Song" */;
+			buildPhases = (
+				E7D2DDD12042DC250086B705 /* Sources */,
+				E7D2DDD22042DC250086B705 /* Frameworks */,
+				E7D2DDD32042DC250086B705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Share a Song";
+			productName = "Share a Song";
+			productReference = E7D2DDD52042DC260086B705 /* Share a Song.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -248,14 +368,25 @@
 		E7D059B21F3B44DE00BE0D19 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
+				LastSwiftUpdateCheck = 0900;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Samoilenko Volodymyr";
 				TargetAttributes = {
+					E757CD4E20319453001B5690 = {
+						CreatedOnToolsVersion = 9.0.1;
+						DevelopmentTeam = 7JW64WU539;
+						ProvisioningStyle = Automatic;
+						TestTargetID = E7D059B91F3B44DE00BE0D19;
+					};
 					E7D059B91F3B44DE00BE0D19 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 7JW64WU539;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
+					};
+					E7D2DDD42042DC250086B705 = {
+						CreatedOnToolsVersion = 9.0.1;
+						DevelopmentTeam = 7JW64WU539;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -274,11 +405,20 @@
 			projectRoot = "";
 			targets = (
 				E7D059B91F3B44DE00BE0D19 /* ShareSongv2.0 */,
+				E757CD4E20319453001B5690 /* ShareSongv2.0Tests */,
+				E7D2DDD42042DC250086B705 /* Share a Song */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E757CD4D20319453001B5690 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7D059B81F3B44DE00BE0D19 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,9 +440,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7D2DDD32042DC250086B705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7D2DDDD2042DC260086B705 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E757CD4B20319453001B5690 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E757CD5220319453001B5690 /* ShareSongv2_0Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E7D059B61F3B44DE00BE0D19 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -329,7 +485,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E7D2DDD12042DC250086B705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E7D2DDDA2042DC260086B705 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E757CD5520319453001B5690 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7D059B91F3B44DE00BE0D19 /* ShareSongv2.0 */;
+			targetProxy = E757CD5420319453001B5690 /* PBXContainerItemProxy */;
+		};
+		E7D2DDE02042DC260086B705 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E7D2DDD42042DC250086B705 /* Share a Song */;
+			targetProxy = E7D2DDDF2042DC260086B705 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		E7D059C11F3B44DE00BE0D19 /* Main.storyboard */ = {
@@ -348,9 +525,59 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		E7D2DDDB2042DC260086B705 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E7D2DDDC2042DC260086B705 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E757CD5720319453001B5690 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JW64WU539;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ShareSongv2.0Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SMK.ShareSongv2-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShareSongv2.0.app/ShareSongv2.0";
+			};
+			name = Debug;
+		};
+		E757CD5820319453001B5690 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JW64WU539;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = ShareSongv2.0Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SMK.ShareSongv2-0Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ShareSongv2.0.app/ShareSongv2.0";
+			};
+			name = Release;
+		};
 		E7D059CA1F3B44DE00BE0D19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -459,7 +686,9 @@
 		E7D059CD1F3B44DE00BE0D19 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7JW64WU539;
 				INFOPLIST_FILE = ShareSongv2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -474,7 +703,9 @@
 		E7D059CE1F3B44DE00BE0D19 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEVELOPMENT_TEAM = 7JW64WU539;
 				INFOPLIST_FILE = ShareSongv2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -486,9 +717,58 @@
 			};
 			name = Release;
 		};
+		E7D2DDE22042DC260086B705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JW64WU539;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Share a Song/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SMK.ShareASong.Share-a-Song";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E7D2DDE32042DC260086B705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7JW64WU539;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = "Share a Song/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "SMK.ShareASong.Share-a-Song";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E757CD5620319453001B5690 /* Build configuration list for PBXNativeTarget "ShareSongv2.0Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E757CD5720319453001B5690 /* Debug */,
+				E757CD5820319453001B5690 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E7D059B51F3B44DE00BE0D19 /* Build configuration list for PBXProject "ShareSongv2.0" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -503,6 +783,15 @@
 			buildConfigurations = (
 				E7D059CD1F3B44DE00BE0D19 /* Debug */,
 				E7D059CE1F3B44DE00BE0D19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7D2DDE42042DC260086B705 /* Build configuration list for PBXNativeTarget "Share a Song" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7D2DDE22042DC260086B705 /* Debug */,
+				E7D2DDE32042DC260086B705 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
