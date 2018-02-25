@@ -75,7 +75,7 @@ class SMKSongStore {
                                 image: image!,
                                 spotifyUri: spotifyUri,
                                 appleUri: appleUri)
-        if count() >= 50 {
+        if count() >= 200 {
             self.store.remove(at: count())
         }
         store.insert(song, at: 0)

@@ -9,11 +9,23 @@
 import UIKit
 import NotificationCenter
 
+import Foundation
+
+
 class TodayViewController: UIViewController, NCWidgetProviding {
-        
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var activitiIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view from its nib.
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        self.activitiIndicator.startAnimating()
     }
     
     override func didReceiveMemoryWarning() {

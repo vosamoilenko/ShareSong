@@ -19,7 +19,6 @@ class SMKSongTransfer : NSObject, MPMediaPickerControllerDelegate {
     private override init() {
         self.tokenInfo = [String:Any]()
         self.storefrontIdentifier = String()
-        
     }
     func transfer(link: String, completion: @escaping ([String:Any]?) -> Void, failure: @escaping ([String:Any]?) -> Void) {
         if SpotifySearch.isSpotify(link: link) {
